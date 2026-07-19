@@ -338,6 +338,24 @@ svg{display:block}
   padding-left:16px;
   position:relative;
 }
+/* ── Related forms panel ── */
+.forms-panel{margin-top:28px;border-top:1px solid var(--rim);padding-top:20px}
+.forms-panel-hd{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;padding:4px 0}
+.forms-panel-label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.forms-panel-arr{color:var(--teal);transition:transform .22s cubic-bezier(.22,.9,.36,1)}
+.forms-panel.open .forms-panel-arr{transform:rotate(180deg)}
+.forms-list{display:none;margin-top:14px;display:flex;flex-direction:column;gap:0}
+.forms-panel:not(.open) .forms-list{display:none}
+.forms-panel.open .forms-list{display:flex}
+.form-item{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(3,64,120,.4)}
+.form-item:last-child{border-bottom:none}
+.form-badge{flex-shrink:0;background:var(--depth);border:1px solid var(--rim);border-radius:4px;padding:4px 9px;font-size:.75rem;font-weight:700;letter-spacing:.06em;color:var(--teal);white-space:nowrap;font-family:var(--sans)}
+.form-info{flex:1;min-width:0}
+.form-name{font-size:.9rem;font-weight:500;color:var(--hi);margin-bottom:2px}
+.form-desc{font-size:.8125rem;color:var(--dim);line-height:1.5}
+.form-link{flex-shrink:0;display:inline-flex;align-items:center;gap:5px;font-size:.75rem;font-weight:600;color:var(--teal);text-decoration:none;white-space:nowrap;opacity:.85;transition:opacity .15s}
+.form-link:hover{opacity:1}
+
 .svc-drop-bullets li::before{
   content:'';
   position:absolute;left:0;top:9px;
@@ -1039,6 +1057,29 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
               <li>Pricing, margin, and unit economics review</li>
               <li>Finance team hiring and process build-out</li>
             </ul>
+            <div class="forms-panel" onclick="toggleForms(this)">
+              <div class="forms-panel-hd">
+                <span class="forms-panel-label">Related CRA Forms</span>
+                <svg class="forms-panel-arr" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="forms-list">
+                <div class="form-item">
+                  <span class="form-badge">T2</span>
+                  <div class="form-info"><div class="form-name">Corporate Income Tax Return</div><div class="form-desc">Annual return filed by all corporations resident in Canada.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T2 SCH 1</span>
+                  <div class="form-info"><div class="form-name">Net Income for Tax Purposes</div><div class="form-desc">Reconciles accounting net income to taxable income.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2sch1.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T106</span>
+                  <div class="form-info"><div class="form-name">Related-Party Transactions</div><div class="form-desc">Discloses transactions between the corporation and non-arm's-length non-residents.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t106.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1060,6 +1101,29 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
               <li>Risk profiling and asset allocation</li>
               <li>Exit and ownership transition planning</li>
             </ul>
+            <div class="forms-panel" onclick="toggleForms(this)">
+              <div class="forms-panel-hd">
+                <span class="forms-panel-label">Related CRA Forms</span>
+                <svg class="forms-panel-arr" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="forms-list">
+                <div class="form-item">
+                  <span class="form-badge">T5</span>
+                  <div class="form-info"><div class="form-name">Statement of Investment Income</div><div class="form-desc">Reports dividends, interest, and other investment income paid to individuals.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t5.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T3</span>
+                  <div class="form-info"><div class="form-name">Trust Income Tax and Information Return</div><div class="form-desc">Filed for testamentary and inter vivos trusts holding investment assets.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t3ret.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">RC243</span>
+                  <div class="form-info"><div class="form-name">Tax-Free Savings Account (TFSA) Return</div><div class="form-desc">Reports TFSA contributions, withdrawals, and excess amounts.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/rc243.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1081,6 +1145,34 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
               <li>Corporate and personal tax filing</li>
               <li>CRA audit support and representation</li>
             </ul>
+            <div class="forms-panel" onclick="toggleForms(this)">
+              <div class="forms-panel-hd">
+                <span class="forms-panel-label">Related CRA Forms</span>
+                <svg class="forms-panel-arr" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="forms-list">
+                <div class="form-item">
+                  <span class="form-badge">T1</span>
+                  <div class="form-info"><div class="form-name">General Income Tax and Benefit Return</div><div class="form-desc">Annual personal tax return for Canadian residents reporting all income sources.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T2200</span>
+                  <div class="form-info"><div class="form-name">Declaration of Conditions of Employment</div><div class="form-desc">Allows employees to deduct home office and employment expenses.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2200.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T183</span>
+                  <div class="form-info"><div class="form-name">Information Return for Electronic Filing</div><div class="form-desc">Authorizes a tax preparer to electronically file a personal tax return on your behalf.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t183.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T2057</span>
+                  <div class="form-info"><div class="form-name">Election on Disposition of Property (Section 85)</div><div class="form-desc">Used to transfer assets to a corporation on a tax-deferred basis.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2057.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1102,6 +1194,34 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
               <li>Payroll processing and remittances</li>
               <li>Year-end close and financial statement preparation</li>
             </ul>
+            <div class="forms-panel" onclick="toggleForms(this)">
+              <div class="forms-panel-hd">
+                <span class="forms-panel-label">Related CRA Forms</span>
+                <svg class="forms-panel-arr" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="forms-list">
+                <div class="form-item">
+                  <span class="form-badge">T4</span>
+                  <div class="form-info"><div class="form-name">Statement of Remuneration Paid</div><div class="form-desc">Issued annually to employees reporting employment income, CPP, and EI deductions.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t4.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T4A</span>
+                  <div class="form-info"><div class="form-name">Statement of Pension, Retirement, Annuity &amp; Other Income</div><div class="form-desc">Reports non-employment income including contractor payments and self-employed commissions.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t4a.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">RC59</span>
+                  <div class="form-info"><div class="form-name">Business Consent for Online Access</div><div class="form-desc">Authorizes our firm to access and act on your CRA business account.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/rc59.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T5018</span>
+                  <div class="form-info"><div class="form-name">Statement of Contract Payments</div><div class="form-desc">Required for businesses in construction paying subcontractors more than $500.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t5018.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1123,6 +1243,29 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
               <li>Restructuring and cost reduction planning</li>
               <li>Succession and ownership transition advisory</li>
             </ul>
+            <div class="forms-panel" onclick="toggleForms(this)">
+              <div class="forms-panel-hd">
+                <span class="forms-panel-label">Related CRA Forms</span>
+                <svg class="forms-panel-arr" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="forms-list">
+                <div class="form-item">
+                  <span class="form-badge">T2057</span>
+                  <div class="form-info"><div class="form-name">Election on Disposition of Property (Section 85)</div><div class="form-desc">Transfers assets to a corporation tax-deferred — common in restructuring and incorporations.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2057.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T2054</span>
+                  <div class="form-info"><div class="form-name">Election for a Capital Dividend</div><div class="form-desc">Allows corporations to pay tax-free capital dividends from the Capital Dividend Account.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2054.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T1135</span>
+                  <div class="form-info"><div class="form-name">Foreign Income Verification Statement</div><div class="form-desc">Required when total cost of foreign property exceeds $100,000 CAD.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t1135.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1144,6 +1287,29 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
               <li>Auditor liaison and support during fieldwork</li>
               <li>Post-audit remediation planning</li>
             </ul>
+            <div class="forms-panel" onclick="toggleForms(this)">
+              <div class="forms-panel-hd">
+                <span class="forms-panel-label">Related CRA Forms</span>
+                <svg class="forms-panel-arr" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="forms-list">
+                <div class="form-item">
+                  <span class="form-badge">T1134</span>
+                  <div class="form-info"><div class="form-name">Foreign Affiliate Information Return</div><div class="form-desc">Filed by Canadian corporations with interests in foreign affiliates.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t1134.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">T2SCH 50</span>
+                  <div class="form-info"><div class="form-name">Shareholder Information</div><div class="form-desc">Discloses shareholders holding 10% or more of any class of shares.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2sch50.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+                <div class="form-item">
+                  <span class="form-badge">RC4650</span>
+                  <div class="form-info"><div class="form-name">CRA Audit Objection Form</div><div class="form-desc">Used to file a formal notice of objection against a CRA reassessment.</div></div>
+                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/notice-objection-appeal-related-forms-publications.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -2369,6 +2535,10 @@ function go(id, anchor){
   }
 }
 function goSvc(anchor){ go('svcs', anchor); }
+function toggleForms(panel){
+  event.stopPropagation();
+  panel.classList.toggle('open');
+}
 function toggleSvc(row){
   const isOpen=row.classList.contains('open');
   document.querySelectorAll('.svc-row.open').forEach(r=>r.classList.remove('open'));
