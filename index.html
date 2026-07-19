@@ -1383,27 +1383,9 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                 </div>
               </div>
             </div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">T2200</span>
-                  <div class="form-info"><div class="form-name">Declaration of Conditions of Employment</div><div class="form-desc">Allows employees to deduct home office and employment expenses.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2200.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">T183</span>
-                  <div class="form-info"><div class="form-name">Information Return for Electronic Filing</div><div class="form-desc">Authorizes a tax preparer to electronically file a personal tax return on your behalf.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t183.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">T2057</span>
-                  <div class="form-info"><div class="form-name">Election on Disposition of Property (Section 85)</div><div class="form-desc">Used to transfer assets to a corporation on a tax-deferred basis.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2057.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
+
 
         <div class="svc-row" onclick="toggleSvc(this)">
           <div class="svc-trigger">
@@ -1423,7 +1405,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
               <li>Payroll processing and remittances</li>
               <li>Year-end close and financial statement preparation</li>
             </ul>
-                        <div class="forms-section">
+            <div class="forms-section">
               <div class="forms-section-label">Related CRA Forms</div>
 
               <!-- T4 -->
@@ -1440,16 +1422,16 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                     <div class="ff-field"><label class="ff-label">Employee Name <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="Jane Smith" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Employee SIN <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="000-000-000" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Employer Name</label><input class="ff-inp" type="text" placeholder="ABC Corp." onclick="event.stopPropagation()"></div>
-                    <div class="ff-field"><label class="ff-label">Payroll Account Number (RP)</label><input class="ff-inp" type="text" placeholder="123456789 RP0001" onclick="event.stopPropagation()"></div>
+                    <div class="ff-field"><label class="ff-label">Payroll Account (RP)</label><input class="ff-inp" type="text" placeholder="123456789 RP0001" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Province of Employment</label><select class="ff-sel" onclick="event.stopPropagation()"><option value="">Select…</option><option>Ontario</option><option>British Columbia</option><option>Alberta</option><option>Quebec</option><option>Other</option></select></div>
-                    <div class="ff-field"><label class="ff-label">Employment Code</label><select class="ff-sel" onclick="event.stopPropagation()"><option value="">Select…</option><option>Regular employment</option><option>Commission employee</option><option>Placement agency</option><option>Taxi / ride share driver</option><option>Barber / hairdresser</option></select></div>
+                    <div class="ff-field"><label class="ff-label">Tax Year</label><input class="ff-inp" type="number" placeholder="2024" onclick="event.stopPropagation()"></div>
                     <hr class="ff-divider">
                     <div class="ff-section-label">Box Amounts</div>
                     <div class="ff-field"><label class="ff-label">Box 14 — Employment Income ($) <span class="ff-req">*</span></label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Box 22 — Income Tax Deducted ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
-                    <div class="ff-field"><label class="ff-label">Box 16 — Employee CPP Contributions ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
-                    <div class="ff-field"><label class="ff-label">Box 18 — Employee EI Premiums ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
-                    <div class="ff-field"><label class="ff-label">Box 26 — CPP/QPP Pensionable Earnings ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
+                    <div class="ff-field"><label class="ff-label">Box 16 — Employee CPP ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
+                    <div class="ff-field"><label class="ff-label">Box 18 — Employee EI ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
+                    <div class="ff-field"><label class="ff-label">Box 26 — CPP Pensionable Earnings ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Box 24 — EI Insurable Earnings ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
                   </div>
                   <div class="ff-actions">
@@ -1468,7 +1450,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                   <svg class="form-accord-arr" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                 </div>
                 <div class="form-body">
-                  <p class="form-body-desc">Issued to contractors, self-employed individuals receiving commissions, pension recipients, and others receiving non-employment income from your business.</p>
+                  <p class="form-body-desc">Issued to contractors, self-employed individuals receiving commissions, and others receiving non-employment income from your business.</p>
                   <div class="ff-grid">
                     <div class="ff-field"><label class="ff-label">Recipient Name <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="Jane Smith" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Recipient SIN <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="000-000-000" onclick="event.stopPropagation()"></div>
@@ -1480,7 +1462,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                     <div class="ff-field"><label class="ff-label">Box 022 — Income Tax Deducted ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Box 048 — Fees for Services ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Box 016 — Pension / Superannuation ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
-                    <div class="ff-note">Box 048 must be reported for all fees-for-services payments made to individuals and partnerships since 2021, even if no tax was withheld.</div>
+                    <div class="ff-note">Box 048 must be reported for all fees-for-services payments since 2021, even if no tax was withheld.</div>
                   </div>
                   <div class="ff-actions">
                     <button class="ff-submit" onclick="submitIntakeForm(this,'T4A Other Income');event.stopPropagation()">Send to Our Team</button>
@@ -1502,35 +1484,16 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                   <div class="ff-grid">
                     <div class="ff-field"><label class="ff-label">Business / Legal Name <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="ABC Holdings Inc." onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Business Number (BN) <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="123456789" onclick="event.stopPropagation()"></div>
-                    <div class="ff-field"><label class="ff-label">CRA Program Account Type</label><select class="ff-sel" onclick="event.stopPropagation()"><option value="">Select…</option><option>Corporate Income Tax (RC)</option><option>Payroll (RP)</option><option>GST/HST (RT)</option><option>Import / Export (RM)</option><option>All accounts</option></select></div>
+                    <div class="ff-field"><label class="ff-label">CRA Program Account Type</label><select class="ff-sel" onclick="event.stopPropagation()"><option value="">Select…</option><option>Corporate Income Tax (RC)</option><option>Payroll (RP)</option><option>GST/HST (RT)</option><option>All accounts</option></select></div>
                     <div class="ff-field"><label class="ff-label">Level of Authorization</label><select class="ff-sel" onclick="event.stopPropagation()"><option value="">Select…</option><option>Level 1 — Inquire only</option><option>Level 2 — Inquire and transact</option></select></div>
                     <div class="ff-field"><label class="ff-label">Authorization Start Date</label><input class="ff-inp" type="date" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Authorization End Date (optional)</label><input class="ff-inp" type="date" onclick="event.stopPropagation()"></div>
-                    <div class="ff-note">This consent is required before we can access your CRA account on your behalf. Our representative number is on file with CRA.</div>
+                    <div class="ff-note">This consent is required before we can access your CRA account on your behalf.</div>
                   </div>
                   <div class="ff-actions">
                     <button class="ff-submit" onclick="submitIntakeForm(this,'RC59 Business Consent');event.stopPropagation()">Send to Our Team</button>
                     <a class="ff-cra-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/rc59.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Official CRA form <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
                   </div>
-                </div>
-              </div>
-            </div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t4.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">T4A</span>
-                  <div class="form-info"><div class="form-name">Statement of Pension, Retirement, Annuity &amp; Other Income</div><div class="form-desc">Reports non-employment income including contractor payments and self-employed commissions.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t4a.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">RC59</span>
-                  <div class="form-info"><div class="form-name">Business Consent for Online Access</div><div class="form-desc">Authorizes our firm to access and act on your CRA business account.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/rc59.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">T5018</span>
-                  <div class="form-info"><div class="form-name">Statement of Contract Payments</div><div class="form-desc">Required for businesses in construction paying subcontractors more than $500.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t5018.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
                 </div>
               </div>
             </div>
@@ -1555,7 +1518,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
               <li>Restructuring and cost reduction planning</li>
               <li>Succession and ownership transition advisory</li>
             </ul>
-                        <div class="forms-section">
+            <div class="forms-section">
               <div class="forms-section-label">Related CRA Forms</div>
 
               <!-- T2057 -->
@@ -1567,17 +1530,17 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                   <svg class="form-accord-arr" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                 </div>
                 <div class="form-body">
-                  <p class="form-body-desc">Filed jointly by a transferor and a corporation to transfer property (business assets, shares, IP) on a tax-deferred basis. Critical in incorporations and restructurings.</p>
+                  <p class="form-body-desc">Filed jointly by a transferor and a corporation to transfer property on a tax-deferred basis. Critical in incorporations and restructurings.</p>
                   <div class="ff-grid">
                     <div class="ff-field"><label class="ff-label">Transferor Name <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="Jane Smith or ABC Inc." onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Transferor SIN / BN</label><input class="ff-inp" type="text" placeholder="000-000-000 or BN" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Transferee Corporation</label><input class="ff-inp" type="text" placeholder="Newco Inc." onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Corporation Business Number</label><input class="ff-inp" type="text" placeholder="123456789 RC0001" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Property Description</label><input class="ff-inp" type="text" placeholder="e.g. Business goodwill, equipment" onclick="event.stopPropagation()"></div>
-                    <div class="ff-field"><label class="ff-label">FMV of Property Transferred ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
-                    <div class="ff-field"><label class="ff-label">Agreed Amount (Elected Amount, $)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
+                    <div class="ff-field"><label class="ff-label">FMV of Property ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
+                    <div class="ff-field"><label class="ff-label">Agreed / Elected Amount ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">ACB of Property ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
-                    <div class="ff-note">The elected amount cannot be less than the boot received or more than the FMV. Incorrect elections may result in a deemed disposition. Our team will calculate the optimal elected amount.</div>
+                    <div class="ff-note">The elected amount cannot be less than the boot received or more than the FMV. Our team will calculate the optimal elected amount.</div>
                   </div>
                   <div class="ff-actions">
                     <button class="ff-submit" onclick="submitIntakeForm(this,'T2057 Section 85 Election');event.stopPropagation()">Send to Our Team</button>
@@ -1600,10 +1563,10 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                     <div class="ff-field"><label class="ff-label">Corporation Name <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="ABC Holdings Inc." onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Business Number <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="123456789 RC0001" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Dividend Payment Date</label><input class="ff-inp" type="date" onclick="event.stopPropagation()"></div>
-                    <div class="ff-field"><label class="ff-label">Capital Dividend Account Balance ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
-                    <div class="ff-field"><label class="ff-label">Amount of Capital Dividend ($) <span class="ff-req">*</span></label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
+                    <div class="ff-field"><label class="ff-label">CDA Balance ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
+                    <div class="ff-field"><label class="ff-label">Capital Dividend Amount ($) <span class="ff-req">*</span></label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Number of Shareholders</label><input class="ff-inp" type="number" placeholder="1" min="1" onclick="event.stopPropagation()"></div>
-                    <div class="ff-note">The capital dividend cannot exceed the CDA balance at the time of payment. An over-election results in a 60% penalty tax. We will verify your CDA balance before filing.</div>
+                    <div class="ff-note">The capital dividend cannot exceed the CDA balance. An over-election results in a 60% penalty tax. We will verify your CDA balance before filing.</div>
                   </div>
                   <div class="ff-actions">
                     <button class="ff-submit" onclick="submitIntakeForm(this,'T2054 Capital Dividend');event.stopPropagation()">Send to Our Team</button>
@@ -1621,9 +1584,9 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                   <svg class="form-accord-arr" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                 </div>
                 <div class="form-body">
-                  <p class="form-body-desc">Required when the total adjusted cost base of specified foreign property exceeds $100,000 CAD at any time during the year. Penalties for late filing are $25/day up to $2,500.</p>
+                  <p class="form-body-desc">Required when the total adjusted cost base of specified foreign property exceeds $100,000 CAD at any time during the year.</p>
                   <div class="ff-grid">
-                    <div class="ff-field"><label class="ff-label">Taxpayer / Corporation Name <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="Jane Smith or ABC Inc." onclick="event.stopPropagation()"></div>
+                    <div class="ff-field"><label class="ff-label">Taxpayer / Corporation <span class="ff-req">*</span></label><input class="ff-inp" type="text" placeholder="Jane Smith or ABC Inc." onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">SIN or Business Number</label><input class="ff-inp" type="text" placeholder="000-000-000 or BN" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Tax Year</label><input class="ff-inp" type="number" placeholder="2024" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Number of Foreign Properties</label><input class="ff-inp" type="number" placeholder="1" min="1" onclick="event.stopPropagation()"></div>
@@ -1631,25 +1594,12 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                     <div class="ff-field"><label class="ff-label">Property Type</label><select class="ff-sel" onclick="event.stopPropagation()"><option value="">Select…</option><option>Funds held outside Canada</option><option>Shares in a foreign corporation</option><option>Real property outside Canada</option><option>Indebtedness owed by non-residents</option><option>Other</option></select></div>
                     <div class="ff-field"><label class="ff-label">Maximum Cost Amount During Year ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
                     <div class="ff-field"><label class="ff-label">Income Earned ($)</label><input class="ff-inp" type="number" placeholder="0.00" onclick="event.stopPropagation()"></div>
+                    <div class="ff-note">Penalties for late filing are $25/day up to $2,500. Contact us immediately if you hold foreign property exceeding $100K.</div>
                   </div>
                   <div class="ff-actions">
                     <button class="ff-submit" onclick="submitIntakeForm(this,'T1135 Foreign Income');event.stopPropagation()">Send to Our Team</button>
                     <a class="ff-cra-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t1135.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">Official CRA form <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
                   </div>
-                </div>
-              </div>
-            </div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2057.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">T2054</span>
-                  <div class="form-info"><div class="form-name">Election for a Capital Dividend</div><div class="form-desc">Allows corporations to pay tax-free capital dividends from the Capital Dividend Account.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2054.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">T1135</span>
-                  <div class="form-info"><div class="form-name">Foreign Income Verification Statement</div><div class="form-desc">Required when total cost of foreign property exceeds $100,000 CAD.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t1135.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
                 </div>
               </div>
             </div>
@@ -1760,19 +1710,6 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
                 </div>
               </div>
             </div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t1134.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">T2SCH 50</span>
-                  <div class="form-info"><div class="form-name">Shareholder Information</div><div class="form-desc">Discloses shareholders holding 10% or more of any class of shares.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t2sch50.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-                <div class="form-item">
-                  <span class="form-badge">RC4650</span>
-                  <div class="form-info"><div class="form-name">CRA Audit Objection Form</div><div class="form-desc">Used to file a formal notice of objection against a CRA reassessment.</div></div>
-                  <a class="form-link" href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/notice-objection-appeal-related-forms-publications.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CRA <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
