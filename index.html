@@ -2388,36 +2388,63 @@ initReveal();
 const _origGo=go;
 go=function(id,anchor){_origGo(id,anchor);setTimeout(initReveal,50);};
 
+/* ── Formspree endpoint — paste your form ID after the slash ── */
+const FORMSPREE_ID = 'YOUR_FORM_ID';
+
 function submitContact(e){
   e.preventDefault();
-  const name=document.getElementById('cf-name').value.trim();
-  const email=document.getElementById('cf-email').value.trim();
-  const service=document.getElementById('cf-service').value;
-  const msg=document.getElementById('cf-msg').value.trim();
-  const consent=document.getElementById('cf-consent').checked;
-  const errBox=document.getElementById('cf-error');
-  const errors=[];
-  if(!name)errors.push('Full name is required.');
-  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))errors.push('A valid email address is required.');
-  if(!service)errors.push('Please select an area of interest.');
-  if(!msg)errors.push('Please tell us about your situation.');
-  if(!consent)errors.push('Please agree to be contacted before submitting.');
+  const name    = document.getElementById('cf-name').value.trim();
+  const email   = document.getElementById('cf-email').value.trim();
+  const company = document.getElementById('cf-company').value.trim();
+  const phone   = document.getElementById('cf-phone').value.trim();
+  const service = document.getElementById('cf-service').value;
+  const size    = document.getElementById('cf-size').value;
+  const msg     = document.getElementById('cf-msg').value.trim();
+  const consent = document.getElementById('cf-consent').checked;
+  const errBox  = document.getElementById('cf-error');
+  const errors  = [];
+  if(!name)   errors.push('Full name is required.');
+  if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push('A valid email address is required.');
+  if(!service) errors.push('Please select an area of interest.');
+  if(!msg)     errors.push('Please tell us about your situation.');
+  if(!consent) errors.push('Please agree to be contacted before submitting.');
   if(errors.length){
-    errBox.innerHTML=errors.join('<br>');
-    errBox.style.display='block';
-    errBox.scrollIntoView({behavior:'smooth',block:'nearest'});
+    errBox.innerHTML = errors.join('<br>');
+    errBox.style.display = 'block';
+    errBox.scrollIntoView({behavior:'smooth', block:'nearest'});
     return;
   }
-  errBox.style.display='none';
-  const btn=document.getElementById('cf-submit');
-  const label=document.getElementById('cf-btn-label');
-  const spinner=document.getElementById('cf-spinner');
-  btn.disabled=true;label.textContent='Sending…';spinner.style.display='block';
-  /* Simulate send — replace with real endpoint if needed */
-  setTimeout(()=>{
-    document.getElementById('contactForm').style.display='none';
-    document.getElementById('cf-success').style.display='block';
-    document.getElementById('cf-success').scrollIntoView({behavior:'smooth',block:'nearest'});
-  },1200);
+  errBox.style.display = 'none';
+  const btn     = document.getElementById('cf-submit');
+  const label   = document.getElementById('cf-btn-label');
+  const spinner = document.getElementById('cf-spinner');
+  btn.disabled = true; label.textContent = 'Sending…'; spinner.style.display = 'block';
+
+  fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+    method: 'POST',
+    headers: {'Accept':'application/json','Content-Type':'application/json'},
+    body: JSON.stringify({
+      name, email, company, phone,
+      'service-area': service,
+      'business-size': size,
+      message: msg,
+      _subject: 'New Business Inquiry — ' + name
+    })
+  })
+  .then(r => r.json())
+  .then(data => {
+    if(data.ok){
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('cf-success').style.display = 'block';
+      document.getElementById('cf-success').scrollIntoView({behavior:'smooth', block:'nearest'});
+    } else {
+      throw new Error(data.error || 'Submission failed');
+    }
+  })
+  .catch(err => {
+    btn.disabled = false; label.textContent = 'Send Inquiry'; spinner.style.display = 'none';
+    errBox.innerHTML = 'Something went wrong. Please try again or email us directly at northstardigitalinc@gmail.com';
+    errBox.style.display = 'block';
+  });
 }
 </script>
