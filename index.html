@@ -2747,8 +2747,8 @@ function go(id, anchor){
   document.getElementById('page-'+id).classList.add('on');
   const nl=document.getElementById('nl-'+id);
   if(nl)nl.classList.add('on');
+  history.replaceState(null,'','#'+id+(anchor?'/'+anchor:''));
   if(anchor){
-    // Wait two animation frames so the page is painted before scrolling
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
       const el=document.getElementById(anchor);
       if(el)el.scrollIntoView({behavior:'smooth'});
@@ -2758,6 +2758,10 @@ function go(id, anchor){
   }
 }
 function goSvc(anchor){ go('svcs', anchor); }
+(function(){
+  const h=location.hash.slice(1);
+  if(h){const parts=h.split('/');go(parts[0],parts[1]);}
+})();
 function toggleForms(panel){
   event.stopPropagation();
   panel.classList.toggle('open');
