@@ -1058,7 +1058,6 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
         <a class="nl" id="nl-lend" href="#" onclick="go('lend');return false">For Lenders</a>
         <a class="nl" id="nl-hlth" href="#" onclick="go('hlth');return false">For Healthcare</a>
         <a class="nl" id="nl-about" href="#" onclick="go('about');return false">About</a>
-        <a class="nl" id="nl-faq" href="#" onclick="go('faq');return false">FAQ</a>
         <a class="nl" id="nl-contact" href="#" onclick="go('contact');return false">Contact</a>
       </div>
       <div class="nav-right">
@@ -1079,7 +1078,6 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     <a class="mob-lnk" href="#" onclick="go('lend');closeMob();return false">For Lenders</a>
     <a class="mob-lnk" href="#" onclick="go('hlth');closeMob();return false">For Healthcare</a>
     <a class="mob-lnk" href="#" onclick="go('about');closeMob();return false">About</a>
-    <a class="mob-lnk" href="#" onclick="go('faq');closeMob();return false">FAQ</a>
     <a class="mob-lnk" href="#" onclick="go('contact');closeMob();return false">Contact</a>
     <a class="mob-lnk" href="https://client.qbo.intuit.com" target="_blank" rel="noopener">Client Login</a>
     <div class="mob-cta-wrap">
@@ -1409,7 +1407,6 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
             <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
-            <a class="foot-lnk" href="#" onclick="go('faq');return false">FAQ</a>
             <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
             <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
             <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
@@ -1760,7 +1757,6 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
             <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
-            <a class="foot-lnk" href="#" onclick="go('faq');return false">FAQ</a>
             <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
             <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
             <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
@@ -2108,7 +2104,6 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
             <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
-            <a class="foot-lnk" href="#" onclick="go('faq');return false">FAQ</a>
             <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
             <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
             <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
@@ -2723,7 +2718,6 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
             <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
-            <a class="foot-lnk" href="#" onclick="go('faq');return false">FAQ</a>
             <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
             <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
             <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
@@ -2747,273 +2741,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 
 </div><!-- /about -->
 
-<!-- ── FAQ PAGE ──────────────────────────────────────────────────── -->
-<div class="page" id="page-faq">
 
-  <section class="faq-hero">
-    <div class="w">
-      <div class="ph-ey" style="display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:28px"><span style="width:32px;height:1px;background:var(--teal);display:block;flex-shrink:0"></span>FAQ</div>
-      <h1 style="font-family:var(--serif);font-size:clamp(2.5rem,4.8vw,4.75rem);font-weight:400;line-height:1.06;color:var(--hi);text-wrap:balance;max-width:760px;margin-bottom:20px">Answers to the questions we hear most.</h1>
-      <p style="font-size:1.125rem;font-weight:300;color:var(--lo);line-height:1.75;max-width:600px">Covering our process, tax strategy, healthcare finance, lender requirements, and CRA obligations. If your question isn't here, <a href="#" onclick="go('contact');return false" style="color:var(--teal);text-decoration:none">ask us directly</a>.</p>
-    </div>
-  </section>
-
-  <section class="faq-body">
-    <div class="w">
-      <div class="faq-layout">
-
-        <!-- Sticky side nav -->
-        <div class="faq-nav">
-          <a class="faq-nav-item active" onclick="document.getElementById('faq-general').scrollIntoView({behavior:'smooth'})">Working with Us</a>
-          <a class="faq-nav-item" onclick="document.getElementById('faq-tax').scrollIntoView({behavior:'smooth'})">Tax &amp; CRA</a>
-          <a class="faq-nav-item" onclick="document.getElementById('faq-healthcare').scrollIntoView({behavior:'smooth'})">Healthcare</a>
-          <a class="faq-nav-item" onclick="document.getElementById('faq-lenders').scrollIntoView({behavior:'smooth'})">Lenders</a>
-          <a class="faq-nav-item" onclick="document.getElementById('faq-process').scrollIntoView({behavior:'smooth'})">Process &amp; Fees</a>
-        </div>
-
-        <!-- FAQ content -->
-        <div>
-
-          <!-- Working with Us -->
-          <div class="faq-section" id="faq-general">
-            <div class="faq-section-title">Working with Us</div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">Do I work directly with a CPA or will I be handed off to a junior?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>You work directly with one of the two co-founding CPAs on every engagement. We do not use junior associates to manage client files. When you call or email, you reach the person who actually prepared your return or manages your file.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">How many clients do you take on?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>We keep our client roster deliberately limited so that every engagement gets the attention it requires. We are not trying to build a high-volume practice. If we are at capacity, we will tell you and maintain a waitlist.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">Do you work with businesses outside of healthcare and lending?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Our core specialisations are lending institutions and healthcare practices, but we do work with growth-stage businesses, professional corporations, and owner-managed companies across other sectors where our expertise is directly applicable — particularly on tax strategy, Fractional CFO services, and bookkeeping.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">Can you take over from my current accountant mid-year?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Yes. We handle the transition, including requesting prior-year files and working papers from your previous accountant, setting up CRA authorizations, and reviewing historical filings for any issues. Mid-year transitions are routine and do not require waiting until year-end.</p></div>
-            </div>
-          </div>
-
-          <!-- Tax & CRA -->
-          <div class="faq-section" id="faq-tax">
-            <div class="faq-section-title">Tax &amp; CRA</div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">What is the deadline for filing a corporate T2 return?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>The T2 must be filed within six months of your corporation's fiscal year-end. However, any balance of tax owing is due two months after year-end (or three months for CCPCs meeting certain conditions). Filing late does not defer the payment deadline — interest accrues from the payment due date, not the filing deadline.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">Should I pay myself salary or dividends from my corporation?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>This depends on your total income, RRSP room available, CPP objectives, personal tax bracket, and the province you reside in. For most owner-managed businesses there is an optimal mix of salary and dividends — not a single right answer. We model this annually for every corporate client to ensure your compensation structure minimizes combined corporate and personal tax.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">How do I respond if CRA selects me for a review or audit?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Contact us before responding to CRA. We will review the audit letter, identify what CRA is looking for, compile the requested documentation, and communicate directly with CRA on your behalf (with your authorization via T1013 or RC59). Never respond to a CRA audit without representation.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">What is the small business deduction and who qualifies?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>The small business deduction (SBD) reduces the federal corporate tax rate on active business income to 9% (from the general 15%) for Canadian-Controlled Private Corporations (CCPCs). The SBD applies to the first $500,000 of active business income. It phases out for corporations with taxable capital exceeding $10M, and was further restricted in 2023 for corporations with significant investment income. We assess SBD eligibility and structure as part of every corporate tax engagement.</p></div>
-            </div>
-          </div>
-
-          <!-- Healthcare -->
-          <div class="faq-section" id="faq-healthcare">
-            <div class="faq-section-title">Healthcare Practices</div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">Should a physician incorporate their practice?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>For most physicians earning above approximately $150,000–$200,000 in net professional income, incorporation provides material tax advantages through income deferral and the ability to leave earnings in a corporation taxed at the lower small business rate. The benefit depends on your province, personal expenses, family situation, and whether you can income-split with a spouse or adult children. We model both scenarios before making a recommendation.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">Are medical services subject to HST/GST?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Most physician and dental services billed under provincial health insurance plans (e.g. OHIP) are exempt from GST/HST. However, many services are taxable or zero-rated: cosmetic procedures, non-OHIP private services, medical reports, and certain administrative services. This creates significant complexity for practices with a mixed billing model. We review your billing structure and ensure HST reporting is accurate — both to avoid under-remitting and to maximize input tax credit recovery where permitted.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">What financial records does a medical practice need to maintain?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Under the Income Tax Act, all businesses must retain records for a minimum of six years from the end of the tax year they relate to. For medical practices this includes: OHIP billing records, private billing invoices, payroll records, equipment purchase receipts, lease agreements, bank statements, and all CRA correspondence. We set up your record-keeping system and document retention schedule as part of our bookkeeping onboarding.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">How is a medical practice valued for a buy-in or partnership?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Medical practice valuations typically use a multiple of normalized EBITDA or a capitalized earnings approach, adjusted for physician-specific factors: patient roster transferability, OHIP billing history, associate dependency, lease terms, and equipment condition. Unlike commercial businesses, a significant portion of a medical practice's value is personal goodwill attached to the founding physician — which affects both the price and the tax structure of the transaction. We prepare independent valuations and advise on deal structure for both buyers and sellers.</p></div>
-            </div>
-          </div>
-
-          <!-- Lenders -->
-          <div class="faq-section" id="faq-lenders">
-            <div class="faq-section-title">Lending Institutions</div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">What financial reporting do lenders typically require from borrowers?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Most commercial lenders require annual or quarterly financial statements (prepared or reviewed by a CPA), a compliance certificate confirming covenant adherence, aged receivables and payables reports, and borrowing base certificates for asset-based facilities. We prepare all of these in the format your lender requires and flag covenant headroom issues before they become defaults.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">What is a debt covenant and what happens if we breach one?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Debt covenants are financial performance conditions embedded in your loan agreement — typically ratios like Debt/EBITDA, Fixed Charge Coverage, or minimum Current Ratio. A breach gives the lender the right to accelerate repayment, increase the interest rate, or appoint a receiver. We model your covenants on a rolling 12-month basis and alert you well before a potential breach, giving time to negotiate a waiver or cure the breach proactively.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">Can you help prepare a borrower package for a new credit facility?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Yes. We prepare lender packages including: three-year historical financial statements, management discussion and analysis (MD&amp;A), a 12–24 month financial projection with assumptions, a sources and uses of funds schedule, and a debt service coverage model. We also advise on how to present the financial story — which metrics to lead with and how to frame risk factors in a way that gives lenders confidence.</p></div>
-            </div>
-          </div>
-
-          <!-- Process & Fees -->
-          <div class="faq-section" id="faq-process">
-            <div class="faq-section-title">Process &amp; Fees</div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">How are your fees structured?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>We use fixed monthly retainers for ongoing services (bookkeeping, CFO advisory, tax planning) and fixed project fees for defined-scope work (tax return preparation, business valuations, advisory engagements). We do not bill by the hour for ongoing services — you will always know what you are paying before the engagement begins. All fees are confirmed in writing in your engagement letter.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">What do you need from me to get started?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>After the discovery call, we send an engagement letter and a new client onboarding package. This includes CRA authorization forms (T1013 for individuals, RC59 for corporations), a request for prior-year tax returns and financial statements, and access credentials for your accounting software. Most new clients are fully onboarded within five to seven business days of signing.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">Do you offer a free initial consultation?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>Yes. The initial 30-minute discovery call is complimentary. We use it to understand your situation and determine whether we are the right fit. If we are not, we will say so and point you toward a firm that is. There is no obligation and no sales pressure.</p></div>
-            </div>
-
-            <div class="faq-item" onclick="this.classList.toggle('open')">
-              <div class="faq-q">
-                <span class="faq-q-text">What accounting software do you work with?</span>
-                <svg class="faq-q-arr" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-              <div class="faq-a"><p>We work primarily with QuickBooks Online and Xero for bookkeeping clients. For tax preparation we use professional-grade Canadian software including TaxCycle and ProFile. We can work within your existing system or migrate you to a platform that better suits your needs — migration support is included in the onboarding for bookkeeping clients.</p></div>
-            </div>
-
-          </div>
-
-          <!-- Still have questions CTA -->
-          <div style="background:var(--panel);border:1px solid var(--rim);border-left:3px solid var(--teal);border-radius:6px;padding:28px 32px;margin-top:16px">
-            <div style="font-size:.875rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px">Still have questions?</div>
-            <p style="font-size:1rem;font-weight:300;color:var(--lo);line-height:1.65;margin-bottom:20px">If your question isn't covered here, reach out directly. We respond to all inquiries within one business day.</p>
-            <div style="display:flex;gap:14px;flex-wrap:wrap">
-              <a class="btn-primary" href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener" style="font-size:.875rem;padding:11px 22px">Book a Free Call</a>
-              <a href="#" onclick="go('contact');return false" style="font-size:.875rem;font-weight:500;color:var(--teal);text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:11px 0">Send a message <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="w">
-      <div class="foot-grid">
-        <div>
-          <div class="foot-logo">Company<span>.</span>Name</div>
-          <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
-        </div>
-        <div>
-          <div class="foot-hdg">Services</div>
-          <div class="foot-links">
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cfo');return false">Fractional CFO</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-fa');return false">Financial Analysis</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-tax');return false">Tax &amp; Payroll</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-bk');return false">Bookkeeping</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-adv');return false">Business Advisory</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cap');return false">Capital Readiness</a>
-          </div>
-        </div>
-        <div>
-          <div class="foot-hdg">Pages</div>
-          <div class="foot-links">
-            <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
-            <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
-            <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
-            <a class="foot-lnk" href="#" onclick="go('faq');return false">FAQ</a>
-            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
-            <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
-            <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
-          </div>
-        </div>
-        <div>
-          <div class="foot-hdg">Contact</div>
-          <div class="foot-links">
-            <a class="foot-lnk" href="tel:+16473393039">+1 (647) 339-3039</a>
-            <a class="foot-lnk" href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener">Schedule a Free Call</a>
-            <a class="foot-lnk" href="https://client.qbo.intuit.com" target="_blank" rel="noopener">Client Login</a>
-          </div>
-        </div>
-      </div>
-      <div class="foot-bot">
-        <span class="foot-copy">&copy; 2025 Company Name. All rights reserved. &nbsp;&middot;&nbsp; CPA Licensed</span>
-        <span class="foot-copy">Privacy &nbsp;&middot;&nbsp; Terms &nbsp;&middot;&nbsp; Disclosures</span>
-      </div>
-    </div>
-  </footer>
-
-</div><!-- /faq -->
 
 <!-- ── CONTACT PAGE ───────────────────────────────────────────── -->
 <div class="page" id="page-contact">
@@ -3132,7 +2860,6 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
         <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
         <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
         <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
-        <a class="foot-lnk" href="#" onclick="go('faq');return false">FAQ</a>
         <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
         <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
         <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
