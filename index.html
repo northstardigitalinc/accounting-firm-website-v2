@@ -1,0 +1,1445 @@
+<!doctype html>
+<title>Company Name — CFO & Financial Advisory</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+/* ─────────────────────────────────────────────────────────
+   BLUE JUNGLE TOKEN SYSTEM
+   Canvas: #010e24  Card: #011D4D  Ocean: #034078
+   Teal: #1282A2  Linen: #E4DFDA  Terracotta: #63372C
+───────────────────────────────────────────────────────── */
+:root {
+  --canvas:   #010e24;
+  --depth:    #011D4D;
+  --panel:    #021e44;
+  --rim:      #034078;
+  --edge:     #0d5490;
+  --mid-surf: #0a3a6e;
+
+  --hi:    #E4DFDA;
+  --body:  #c0b9b0;
+  --lo:    #9a9088;
+  --dim:   #6e6358;
+  --rust:  #63372C;
+
+  --teal:  #1282A2;
+  --teal-lo: rgba(18,130,162,.12);
+
+  --serif: "Didot","Bodoni MT","Bodoni 72 Book",Georgia,serif;
+  --sans:  ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+
+  --pill:  9999px;
+  --r-sm:  4px;
+}
+
+/* ─── RESET ────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:17px;scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--canvas);
+  color:var(--body);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{display:block}
+
+/* ─── LAYOUT ───────────────────────────────────────────── */
+.w{max-width:1200px;margin:0 auto;padding:0 48px}
+
+/* ─── ROUTER ───────────────────────────────────────────── */
+.page{display:none}.page.on{display:block}
+
+/* ─────────────────────────────────────────────────────────
+   NAVIGATION
+───────────────────────────────────────────────────────── */
+.nav{
+  position:sticky;top:0;z-index:90;
+  border-bottom:1px solid var(--rim);
+  background:rgba(1,14,36,.96);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+.nav-inner{display:flex;align-items:center;height:62px}
+.logo{
+  font-family:var(--serif);
+  font-size:1.0625rem;
+  font-weight:400;
+  color:var(--hi);
+  letter-spacing:.03em;
+  flex-shrink:0;
+  margin-right:52px;
+}
+.logo-dot{color:var(--teal)}
+.nav-links{display:flex;gap:0;flex:1}
+.nl{
+  font-size:14px;
+  font-weight:400;
+  color:var(--lo);
+  padding:7px 14px;
+  border-radius:2px;
+  letter-spacing:.01em;
+  transition:color .14s;
+}
+.nl:hover,.nl.on{color:var(--hi)}
+.nav-right{display:flex;gap:10px;margin-left:auto;align-items:center;flex-shrink:0}
+.nav-ghost{
+  font-size:14px;font-weight:400;
+  color:var(--body);
+  padding:8px 20px;
+  border:1px solid var(--edge);
+  border-radius:var(--pill);
+  letter-spacing:.01em;
+  transition:border-color .14s,color .14s;
+}
+.nav-ghost:hover{border-color:var(--hi);color:var(--hi)}
+.nav-cta{
+  font-size:14px;font-weight:500;
+  color:var(--canvas);
+  background:var(--hi);
+  padding:8px 20px;
+  border-radius:var(--pill);
+  letter-spacing:.01em;
+  transition:opacity .14s;
+}
+.nav-cta:hover{opacity:.86}
+.mob-btn{display:none;margin-left:auto;padding:8px;flex-shrink:0}
+.mob-btn span{display:block;width:20px;height:1.5px;background:var(--hi);margin:5px 0}
+.mob-menu{display:none;flex-direction:column;border-top:1px solid var(--rim);
+  padding:16px 48px 24px;background:var(--canvas)}
+.mob-menu.open{display:flex}
+.mob-lnk{font-size:17px;color:var(--lo);padding:13px 0;
+  border-bottom:1px solid var(--rim);transition:color .14s}
+.mob-lnk:hover{color:var(--hi)}
+.mob-cta-wrap{padding-top:20px}
+
+/* ─────────────────────────────────────────────────────────
+   HERO — editorial, no fake cards
+───────────────────────────────────────────────────────── */
+.hero{padding:96px 0 0;position:relative;overflow:hidden}
+.hero-bg{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 70% 60% at 80% 30%,rgba(18,130,162,.055) 0,transparent 100%),
+    radial-gradient(ellipse 50% 40% at 20% 80%,rgba(3,64,120,.10) 0,transparent 100%);
+}
+.hero-content{position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:11px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:40px;
+}
+.eyebrow::before{
+  content:'';width:32px;height:1px;
+  background:var(--teal);flex-shrink:0;
+}
+.hero-h{
+  font-family:var(--serif);
+  font-size:clamp(3.25rem,5.8vw,6rem);
+  font-weight:400;line-height:1.04;
+  letter-spacing:.005em;
+  color:var(--hi);
+  max-width:840px;
+  margin-bottom:32px;
+  text-wrap:balance;
+}
+.hero-sub{
+  font-size:1.1875rem;font-weight:300;
+  color:var(--lo);line-height:1.72;
+  max-width:520px;margin-bottom:52px;
+  letter-spacing:-.01em;
+}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:96px}
+.btn-primary{
+  font-size:15px;font-weight:500;
+  color:var(--canvas);background:var(--hi);
+  padding:14px 34px;border-radius:var(--pill);
+  letter-spacing:.01em;
+  transition:opacity .14s,transform .1s;
+  display:inline-block;
+}
+.btn-primary:hover{opacity:.86;transform:translateY(-1px)}
+.btn-outline{
+  font-size:15px;font-weight:400;
+  color:var(--body);
+  padding:14px 34px;border-radius:var(--pill);
+  border:1px solid var(--edge);
+  letter-spacing:.01em;
+  transition:border-color .14s,color .14s;
+  display:inline-block;
+}
+.btn-outline:hover{border-color:var(--hi);color:var(--hi)}
+
+/* Hero stat strip — typography only, no cards */
+.hero-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  border-top:1px solid var(--rim);
+}
+.hstat{padding:44px 0 52px;position:relative}
+.hstat+.hstat{
+  padding-left:48px;
+  border-left:1px solid var(--rim);
+  margin-left:0;
+}
+.hstat+.hstat{padding-left:48px}
+.hstat-n{
+  font-family:var(--serif);
+  font-size:clamp(2.625rem,4.2vw,4.25rem);
+  font-weight:400;line-height:1;
+  color:var(--teal);
+  font-variant-numeric:tabular-nums;
+  margin-bottom:14px;
+  letter-spacing:.01em;
+}
+.hstat-label{
+  font-size:11px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--lo);margin-bottom:6px;
+}
+.hstat-desc{font-size:14px;font-weight:300;color:var(--dim);line-height:1.5}
+
+/* ─────────────────────────────────────────────────────────
+   EDITORIAL STATEMENT
+───────────────────────────────────────────────────────── */
+.statement{
+  padding:120px 0;
+  border-bottom:1px solid var(--rim);
+}
+.statement-inner{max-width:880px;margin:0 auto;text-align:center}
+.statement-text{
+  font-family:var(--serif);
+  font-size:clamp(1.625rem,3vw,2.75rem);
+  font-weight:400;font-style:italic;
+  color:var(--hi);line-height:1.34;
+  letter-spacing:.005em;
+  text-wrap:balance;
+}
+.statement-rule{
+  width:48px;height:1px;
+  background:var(--teal);
+  margin:32px auto 0;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SERVICES — numbered horizontal rows, no cards
+───────────────────────────────────────────────────────── */
+.services{padding:120px 0}
+.sec-header{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:48px;align-items:end;
+  margin-bottom:64px;
+}
+.sec-eyebrow{
+  font-size:11px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:18px;
+}
+.sec-h{
+  font-family:var(--serif);
+  font-size:clamp(2rem,3.4vw,3.25rem);
+  font-weight:400;line-height:1.1;
+  color:var(--hi);text-wrap:balance;
+}
+.sec-p{
+  font-size:1.0625rem;font-weight:300;
+  color:var(--lo);line-height:1.78;
+  letter-spacing:-.01em;
+  align-self:end;
+}
+.svc-list{border-top:1px solid var(--rim)}
+.svc-row{
+  display:grid;
+  grid-template-columns:56px 1fr 2fr auto;
+  gap:0 40px;align-items:start;
+  padding:36px 0;
+  border-bottom:1px solid var(--rim);
+  cursor:default;
+  transition:background .15s;
+}
+.svc-row:hover{background:rgba(18,130,162,.04);margin:0 -48px;padding:36px 48px}
+.svc-num{
+  font-size:13px;font-weight:400;
+  color:var(--teal);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.04em;
+  padding-top:3px;
+  font-family:var(--serif);
+}
+.svc-name{
+  font-size:1.0625rem;font-weight:500;
+  color:var(--hi);letter-spacing:-.01em;
+  padding-top:2px;
+}
+.svc-cat{
+  display:inline-block;
+  font-size:10px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--teal);
+  border:1px solid rgba(18,130,162,.3);
+  padding:2px 8px;border-radius:var(--pill);
+  margin-top:8px;
+}
+.svc-desc{
+  font-size:.9375rem;font-weight:300;
+  color:var(--lo);line-height:1.75;
+  padding-top:2px;
+}
+.svc-arr{
+  padding-top:5px;
+  transition:transform .15s,color .15s;
+  color:var(--edge);
+}
+.svc-row:hover .svc-arr{transform:translateX(4px);color:var(--teal)}
+
+/* ─────────────────────────────────────────────────────────
+   DISPLAY STAT — one editorial number at scale
+───────────────────────────────────────────────────────── */
+.display-stat{
+  border-top:1px solid var(--rim);
+  border-bottom:1px solid var(--rim);
+  padding:80px 0;
+}
+.display-stat-inner{
+  display:grid;
+  grid-template-columns:1fr 1px 1fr 1px 1fr;
+  gap:0;
+}
+.ds-main{
+  padding-right:64px;
+}
+.ds-n-big{
+  font-family:var(--serif);
+  font-size:clamp(4.5rem,8vw,8.5rem);
+  font-weight:400;line-height:.92;
+  color:var(--teal);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:-.01em;
+  margin-bottom:20px;
+}
+.ds-big-label{
+  font-size:11px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--lo);margin-bottom:8px;
+}
+.ds-big-desc{
+  font-size:.9375rem;font-weight:300;
+  color:var(--dim);line-height:1.6;
+  max-width:260px;
+}
+.ds-rule{background:var(--rim);align-self:stretch}
+.ds-secondary{
+  padding:0 64px;
+  display:flex;flex-direction:column;justify-content:center;
+  gap:48px;
+}
+.ds-sub{
+  display:flex;flex-direction:column;gap:0;
+}
+.ds-sub-n{
+  font-family:var(--serif);
+  font-size:clamp(2rem,3.2vw,3rem);
+  font-weight:400;line-height:1;
+  color:var(--hi);
+  font-variant-numeric:tabular-nums;
+  margin-bottom:10px;
+}
+.ds-sub-label{
+  font-size:11px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:4px;
+}
+.ds-sub-desc{font-size:14px;font-weight:300;color:var(--dim);line-height:1.5}
+
+/* ─────────────────────────────────────────────────────────
+   APPROACH — editorial two-column
+───────────────────────────────────────────────────────── */
+.approach{padding:120px 0}
+.approach-grid{
+  display:grid;grid-template-columns:52% 1fr;
+  gap:80px;align-items:start;
+}
+.approach-pull{
+  font-family:var(--serif);
+  font-size:clamp(1.5rem,2.6vw,2.375rem);
+  font-weight:400;font-style:italic;
+  color:var(--hi);line-height:1.34;
+  margin-bottom:36px;letter-spacing:.005em;
+}
+.approach-body{
+  font-size:1.0625rem;font-weight:300;
+  color:var(--lo);line-height:1.8;
+}
+.cred-table{border-top:1px solid var(--rim)}
+.cred-row{
+  display:flex;justify-content:space-between;
+  align-items:baseline;gap:24px;
+  padding:20px 0;
+  border-bottom:1px solid var(--rim);
+}
+.cred-l{
+  font-size:.9375rem;font-weight:300;
+  color:var(--lo);letter-spacing:-.01em;
+}
+.cred-v{
+  font-family:var(--serif);
+  font-size:1.4375rem;font-weight:400;
+  color:var(--hi);
+  font-variant-numeric:tabular-nums;
+  flex-shrink:0;letter-spacing:.01em;
+}
+
+/* ─────────────────────────────────────────────────────────
+   INNER PAGE — page hero
+───────────────────────────────────────────────────────── */
+.ph{padding:88px 0 96px;border-bottom:1px solid var(--rim)}
+.ph-ey{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:11px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:32px;
+}
+.ph-ey::before{content:'';width:32px;height:1px;background:var(--teal);flex-shrink:0}
+.ph-h{
+  font-family:var(--serif);
+  font-size:clamp(2.75rem,5vw,5.25rem);
+  font-weight:400;line-height:1.06;
+  color:var(--hi);text-wrap:balance;
+  max-width:720px;margin-bottom:24px;
+  letter-spacing:.005em;
+}
+.ph-sub{
+  font-size:1.125rem;font-weight:300;
+  color:var(--lo);line-height:1.75;
+  max-width:580px;margin-bottom:44px;
+  letter-spacing:-.01em;
+}
+
+/* ─── STAT STRIP (inner pages) ─────────────────────────── */
+.stat-strip{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--rim);
+  border-bottom:1px solid var(--rim);
+}
+.ss-cell{padding:44px 36px;border-right:1px solid var(--rim)}
+.ss-cell:last-child{border-right:none}
+.ss-cat{
+  font-size:11px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:12px;
+}
+.ss-n{
+  font-family:var(--serif);
+  font-size:clamp(1.875rem,3vw,2.875rem);
+  font-weight:400;line-height:1;
+  color:var(--teal);
+  font-variant-numeric:tabular-nums;
+  margin-bottom:8px;
+}
+.ss-d{font-size:14px;font-weight:300;color:var(--dim);line-height:1.5}
+
+/* ─── OFFER ROWS (inner pages) ─────────────────────────── */
+.offer-section{padding:120px 0}
+.offer-list{border-top:1px solid var(--rim);margin-top:64px}
+.offer-row{
+  display:grid;
+  grid-template-columns:56px 1fr 2.2fr;
+  gap:0 40px;align-items:start;
+  padding:36px 0;
+  border-bottom:1px solid var(--rim);
+  transition:background .15s;
+}
+.offer-row:hover{background:rgba(18,130,162,.04);margin:0 -48px;padding:36px 48px}
+.offer-num{
+  font-size:13px;font-weight:400;
+  color:var(--teal);font-family:var(--serif);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.04em;padding-top:3px;
+}
+.offer-name{
+  font-size:1.0625rem;font-weight:500;
+  color:var(--hi);letter-spacing:-.01em;padding-top:2px;
+}
+.offer-tag{
+  display:inline-block;margin-top:8px;
+  font-size:10px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--teal);
+  border:1px solid rgba(18,130,162,.3);
+  padding:2px 8px;border-radius:var(--pill);
+}
+.offer-desc{
+  font-size:.9375rem;font-weight:300;
+  color:var(--lo);line-height:1.75;padding-top:2px;
+}
+
+/* ─── EDITORIAL TWO-COL (inner pages) ──────────────────── */
+.ed-section{padding:120px 0;border-top:1px solid var(--rim)}
+.ed-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.ed-pull{
+  font-family:var(--serif);
+  font-size:clamp(1.375rem,2.4vw,2.125rem);
+  font-weight:400;font-style:italic;
+  color:var(--hi);line-height:1.38;
+  margin-bottom:32px;letter-spacing:.005em;
+}
+.ed-body{
+  font-size:1rem;font-weight:300;
+  color:var(--lo);line-height:1.82;
+}
+.proof-rows{border-top:1px solid var(--rim)}
+.pr-row{
+  display:flex;gap:20px;align-items:flex-start;
+  padding:24px 0;border-bottom:1px solid var(--rim);
+}
+.pr-ico{
+  width:30px;height:30px;flex-shrink:0;
+  border:1px solid var(--rim);border-radius:var(--pill);
+  display:flex;align-items:center;justify-content:center;
+  margin-top:1px;
+}
+.pr-t{font-size:1rem;font-weight:500;color:var(--hi);margin-bottom:4px;letter-spacing:-.01em}
+.pr-d{font-size:.9375rem;font-weight:300;color:var(--lo);line-height:1.68}
+
+/* ─── CTA ───────────────────────────────────────────────── */
+.cta{padding:120px 0;border-top:1px solid var(--rim)}
+.cta-grid{
+  display:grid;grid-template-columns:1fr auto;
+  gap:80px;align-items:center;
+}
+.cta-h{
+  font-family:var(--serif);
+  font-size:clamp(1.875rem,3.2vw,3.25rem);
+  font-weight:400;color:var(--hi);
+  line-height:1.12;letter-spacing:.005em;
+  text-wrap:balance;
+}
+.cta-sub{
+  font-size:1rem;font-weight:300;
+  color:var(--lo);margin-top:14px;
+  letter-spacing:-.01em;line-height:1.65;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+footer{border-top:1px solid var(--rim);padding:64px 0 40px}
+.foot-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:48px;margin-bottom:56px;
+}
+.foot-logo{
+  font-family:var(--serif);font-size:1.125rem;
+  font-weight:400;color:var(--hi);
+  margin-bottom:16px;letter-spacing:.02em;
+}
+.foot-logo span{color:var(--teal)}
+.foot-desc{
+  font-size:.9375rem;font-weight:300;
+  color:var(--dim);line-height:1.7;
+}
+.foot-hdg{
+  font-size:10px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:20px;
+}
+.foot-links{display:flex;flex-direction:column;gap:11px}
+.foot-lnk{
+  font-size:.9375rem;font-weight:300;
+  color:var(--dim);transition:color .14s;
+}
+.foot-lnk:hover{color:var(--hi)}
+.foot-bot{
+  border-top:1px solid var(--rim);padding-top:24px;
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:12px;
+}
+.foot-copy{font-size:13px;font-weight:300;color:var(--rust)}
+
+/* ─── UTILS ──────────────────────────────────────────────── */
+.rule{border:none;border-top:1px solid var(--rim)}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+
+/* ── Tablet (≤1024px) ──────────────────────────────────── */
+@media(max-width:1024px){
+  .sec-header{grid-template-columns:1fr}
+  .approach-grid{grid-template-columns:1fr;gap:56px}
+  .display-stat-inner{
+    grid-template-columns:1fr 1px 1fr;
+    grid-template-rows:auto;
+  }
+  .ed-grid{grid-template-columns:1fr;gap:56px}
+  .cta-grid{grid-template-columns:1fr;gap:32px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:40px}
+}
+
+/* ── Mobile (≤768px) ───────────────────────────────────── */
+@media(max-width:768px){
+  html{font-size:16px}
+  .w{padding:0 20px}
+
+  /* Nav */
+  .nav-links,.nav-right{display:none}
+  .mob-btn{display:block}
+  .mob-menu{padding:16px 20px 24px}
+  .nav-inner{height:56px}
+  .logo{margin-right:0;font-size:1rem}
+
+  /* Hero */
+  .hero{padding:56px 0 0}
+  .eyebrow{margin-bottom:24px}
+  .hero-h{margin-bottom:24px}
+  .hero-sub{font-size:1rem;margin-bottom:40px}
+  .hero-btns{
+    flex-direction:column;gap:10px;
+    margin-bottom:56px;
+  }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline{
+    display:block;text-align:center;width:100%;
+    padding:16px 24px;
+  }
+  /* Hero stat strip: 2-col */
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hstat:last-child{display:none}
+  .hstat+.hstat{padding-left:20px}
+  .hstat{padding:36px 0 44px}
+  .hstat-n{font-size:clamp(2rem,8vw,3rem)}
+
+  /* Statement */
+  .statement{padding:72px 0}
+  .statement-text{font-size:clamp(1.25rem,5vw,1.75rem)}
+
+  /* Services */
+  .services{padding:72px 0}
+  .sec-header{margin-bottom:40px}
+  .svc-row{
+    grid-template-columns:36px 1fr;
+    gap:0 14px;padding:28px 0;
+  }
+  .svc-row:hover{
+    background:rgba(18,130,162,.04);
+    margin:0 -20px;padding:28px 20px;
+  }
+  .svc-desc,.svc-arr{display:none}
+  .svc-name{font-size:1rem}
+
+  /* Display stat */
+  .display-stat{padding:56px 0}
+  .display-stat-inner{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .ds-rule{height:1px;width:100%;align-self:auto}
+  .ds-main{padding:0 0 40px}
+  .ds-n-big{font-size:clamp(3.5rem,14vw,6rem)}
+  .ds-secondary{
+    flex-direction:row;
+    padding:40px 0;
+    gap:32px;
+    flex-wrap:wrap;
+  }
+  .ds-sub{flex:1;min-width:120px}
+  .ds-sub-n{font-size:clamp(1.5rem,6vw,2.25rem)}
+
+  /* Approach */
+  .approach{padding:72px 0}
+  .approach-pull{font-size:clamp(1.25rem,4.5vw,1.75rem)}
+  .cred-row{flex-wrap:wrap;gap:6px}
+  .cred-v{font-size:1.25rem}
+
+  /* Inner page hero */
+  .ph{padding:56px 0 64px}
+  .ph-h{margin-bottom:20px}
+  .ph-sub{font-size:1rem;margin-bottom:36px}
+  .ph .hero-btns{flex-direction:column;gap:10px}
+  .ph .hero-btns .btn-primary,
+  .ph .hero-btns .btn-outline{
+    display:block;text-align:center;width:100%;
+    padding:16px 24px;
+  }
+
+  /* Stat strip (inner pages) */
+  .stat-strip{grid-template-columns:1fr 1fr}
+  .ss-cell{padding:32px 20px;border-right:1px solid var(--rim)}
+  .ss-cell:nth-child(even){border-right:none}
+  .ss-cell:nth-child(n+3){border-top:1px solid var(--rim)}
+  .ss-n{font-size:clamp(1.5rem,6vw,2.25rem)}
+
+  /* Offer rows */
+  .offer-section{padding:72px 0}
+  .offer-list{margin-top:40px}
+  .offer-row{
+    grid-template-columns:36px 1fr;
+    gap:0 14px;padding:28px 0;
+  }
+  .offer-row:hover{
+    background:rgba(18,130,162,.04);
+    margin:0 -20px;padding:28px 20px;
+  }
+  .offer-desc{display:none}
+  .offer-name{font-size:1rem}
+
+  /* Editorial section */
+  .ed-section{padding:72px 0}
+  .ed-pull{font-size:clamp(1.125rem,4vw,1.5rem)}
+  .ed-body{font-size:.9375rem}
+  .pr-row{gap:14px}
+
+  /* CTA */
+  .cta{padding:72px 0}
+  .cta-grid{grid-template-columns:1fr;gap:28px}
+  .cta-grid .btn-primary{
+    display:inline-block;width:auto;
+    align-self:flex-start;
+  }
+  .cta-h{font-size:clamp(1.5rem,5.5vw,2.25rem)}
+
+  /* Footer */
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .foot-bot{flex-direction:column;align-items:flex-start;gap:8px}
+  footer{padding:48px 0 32px}
+}
+
+/* ── Small mobile (≤420px) ─────────────────────────────── */
+@media(max-width:420px){
+  .hero-stats{grid-template-columns:1fr}
+  .hstat+.hstat{
+    padding-left:0;
+    border-left:none;
+    border-top:1px solid var(--rim);
+    padding-top:32px;
+  }
+  .hstat:last-child{display:block}
+  .ds-secondary{flex-direction:column;gap:32px}
+  .stat-strip{grid-template-columns:1fr}
+  .ss-cell{border-right:none}
+  .ss-cell:nth-child(n+2){border-top:1px solid var(--rim)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important}
+}
+</style>
+
+<!-- ════════════ NAVIGATION ════════════ -->
+<nav class="nav">
+  <div class="w">
+    <div class="nav-inner">
+      <a class="logo" href="#" onclick="go('home');return false">Company<span class="logo-dot">.</span>Name</a>
+      <div class="nav-links">
+        <a class="nl on" id="nl-home" href="#" onclick="go('home');return false">Overview</a>
+        <a class="nl" id="nl-lend" href="#" onclick="go('lend');return false">For Lenders</a>
+        <a class="nl" id="nl-hlth" href="#" onclick="go('hlth');return false">For Healthcare</a>
+        <a class="nl" href="#">About</a>
+        <a class="nl" href="#">Contact</a>
+      </div>
+      <div class="nav-right">
+        <a class="nav-ghost" href="#">Client Login</a>
+        <a class="nav-cta" href="#">Schedule a Call</a>
+      </div>
+      <button class="mob-btn" id="mobBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mob-menu" id="mobMenu">
+    <a class="mob-lnk" href="#" onclick="go('home');closeMob();return false">Overview</a>
+    <a class="mob-lnk" href="#" onclick="go('lend');closeMob();return false">For Lenders</a>
+    <a class="mob-lnk" href="#" onclick="go('hlth');closeMob();return false">For Healthcare</a>
+    <a class="mob-lnk" href="#">About</a>
+    <a class="mob-lnk" href="#">Contact</a>
+    <div class="mob-cta-wrap">
+      <a class="nav-cta" href="#" style="display:inline-block">Schedule a Call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════════════════════════ -->
+<div class="page on" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="w hero-content">
+      <div class="eyebrow">CFO &amp; Financial Advisory</div>
+      <h1 class="hero-h">Financial leadership<br>for businesses that<br>intend to grow.</h1>
+      <p class="hero-sub">We embed senior financial expertise into growing companies — from fractional CFO services to long-term investment planning — so founders and operators can move faster with confidence.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="#">Schedule a Free Call</a>
+        <a class="btn-outline" href="#">Our Services</a>
+      </div>
+
+      <!-- Stat strip — editorial typography only, no cards -->
+      <div class="hero-stats">
+        <div class="hstat">
+          <div class="hstat-label">Fractional CFO</div>
+          <div class="hstat-n">$600M</div>
+          <div class="hstat-desc">Total client revenue under active financial advisory</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-label">Financial Planning</div>
+          <div class="hstat-n">$19M</div>
+          <div class="hstat-desc">Client investments managed with institutional discipline</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-label">Client Retention</div>
+          <div class="hstat-n">97%</div>
+          <div class="hstat-desc">Year-over-year retention across all service lines</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial statement -->
+  <section class="statement">
+    <div class="statement-inner">
+      <p class="statement-text">"Most accounting firms tell you what happened last quarter. We tell you what to do about it&#8202;—&#8202;and then we do it alongside you."</p>
+      <div class="statement-rule"></div>
+    </div>
+  </section>
+
+  <!-- Services — numbered rows, no cards -->
+  <section class="services">
+    <div class="w">
+      <div class="sec-header">
+        <div>
+          <div class="sec-eyebrow">What We Do</div>
+          <h2 class="sec-h">Full-spectrum financial services, built around your business.</h2>
+        </div>
+        <p class="sec-p">We don't offer a menu of disconnected services. Every engagement is built around your business's specific stage, structure, and goals.</p>
+      </div>
+      <div class="svc-list">
+        <div class="svc-row">
+          <div class="svc-num">01</div>
+          <div>
+            <div class="svc-name">Fractional CFO Services</div>
+            <div class="svc-cat">Flagship</div>
+          </div>
+          <div class="svc-desc">Senior financial leadership embedded in your team&#8202;—&#8202;managing cash, guiding strategy, and making decisions that drive the business forward. No full-time overhead.</div>
+          <div class="svc-arr">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-num">02</div>
+          <div>
+            <div class="svc-name">Financial Planning &amp; Investment</div>
+            <div class="svc-cat">Planning</div>
+          </div>
+          <div class="svc-desc">$19M in client investments, managed with the same rigour as institutional money. Business and personal financial planning, fully integrated.</div>
+          <div class="svc-arr">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-num">03</div>
+          <div>
+            <div class="svc-name">Tax Strategy &amp; Optimization</div>
+            <div class="svc-cat">Tax</div>
+          </div>
+          <div class="svc-desc">Proactive tax planning that reduces liability year-round. Entity structure, deductibility, and regulatory changes addressed before they create exposure.</div>
+          <div class="svc-arr">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-num">04</div>
+          <div>
+            <div class="svc-name">Bookkeeping &amp; Controller Services</div>
+            <div class="svc-cat">Foundation</div>
+          </div>
+          <div class="svc-desc">Clean, accurate books. Monthly reconciliation, management accounts, and financial statements that tell you exactly where the business stands.</div>
+          <div class="svc-arr">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-num">05</div>
+          <div>
+            <div class="svc-name">Business Advisory</div>
+            <div class="svc-cat">Advisory</div>
+          </div>
+          <div class="svc-desc">Strategic guidance through acquisitions, fundraising, restructuring, and ownership transitions. Numbers with narrative&#8202;—&#8202;and a clear recommendation.</div>
+          <div class="svc-arr">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-num">06</div>
+          <div>
+            <div class="svc-name">Audit Readiness &amp; Compliance</div>
+            <div class="svc-cat">Compliance</div>
+          </div>
+          <div class="svc-desc">Internal controls, compliance frameworks, and audit preparation for regulated industries. We prepare you before scrutiny arrives, not after it does.</div>
+          <div class="svc-arr">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Display stat — the editorial number moment -->
+  <section class="display-stat">
+    <div class="w">
+      <div class="display-stat-inner">
+        <div class="ds-main">
+          <div class="ds-big-label">Fractional CFO Services</div>
+          <div class="ds-n-big">$600M</div>
+          <div class="ds-big-desc">Total client revenue under active financial advisory. Not managed at arm's length&#8202;—&#8202;embedded in every business decision.</div>
+        </div>
+        <div class="ds-rule"></div>
+        <div class="ds-secondary">
+          <div class="ds-sub">
+            <div class="ds-sub-label">Financial Planning</div>
+            <div class="ds-sub-n">$19M</div>
+            <div class="ds-sub-desc">Client investments managed with institutional-grade rigour</div>
+          </div>
+          <div class="ds-sub">
+            <div class="ds-sub-label">Track Record</div>
+            <div class="ds-sub-n">12+ yr</div>
+            <div class="ds-sub-desc">Serving clients across lending, healthcare, and technology</div>
+          </div>
+        </div>
+        <div class="ds-rule"></div>
+        <div class="ds-secondary">
+          <div class="ds-sub">
+            <div class="ds-sub-label">Retention</div>
+            <div class="ds-sub-n">97%</div>
+            <div class="ds-sub-desc">Year-over-year client retention across all service lines</div>
+          </div>
+          <div class="ds-sub">
+            <div class="ds-sub-label">Average Tenure</div>
+            <div class="ds-sub-n">4.7 yr</div>
+            <div class="ds-sub-desc">Average client relationship length — not a one-time engagement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach — editorial two-column -->
+  <section class="approach">
+    <div class="w">
+      <div class="approach-grid">
+        <div>
+          <div class="sec-eyebrow" style="margin-bottom:32px">Our Approach</div>
+          <p class="approach-pull">"We don't parachute in at year-end. We sit in your leadership meetings, read your board packs, and understand your business well enough to act&#8202;—&#8202;not just advise."</p>
+          <p class="approach-body">Most firms deliver a report and leave. We deliver decisions. Our advisors work as an extension of your team: embedded in your operations, present in your planning, and accountable to the same outcomes you are.<br><br>We specialise in lending institutions and healthcare practices&#8202;—&#8202;two industries where financial complexity, regulatory pressure, and margin discipline demand advisors who understand the sector, not just the spreadsheet.</p>
+        </div>
+        <div>
+          <div class="cred-table">
+            <div class="cred-row">
+              <span class="cred-l">Revenue under advisory</span>
+              <span class="cred-v">$600M</span>
+            </div>
+            <div class="cred-row">
+              <span class="cred-l">Investments managed</span>
+              <span class="cred-v">$19M</span>
+            </div>
+            <div class="cred-row">
+              <span class="cred-l">Client retention rate</span>
+              <span class="cred-v">97%</span>
+            </div>
+            <div class="cred-row">
+              <span class="cred-l">Average client tenure</span>
+              <span class="cred-v">4.7 yr</span>
+            </div>
+            <div class="cred-row">
+              <span class="cred-l">Industries served</span>
+              <span class="cred-v">8+</span>
+            </div>
+            <div class="cred-row">
+              <span class="cred-l">CPA licensed advisors</span>
+              <span class="cred-v">Yes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div class="w">
+      <div class="cta-grid">
+        <div>
+          <h2 class="cta-h">Ready to talk about your business?</h2>
+          <p class="cta-sub">A 30-minute call with a senior advisor. No pitch, no commitment&#8202;—&#8202;just a clear conversation about where you are and what you need.</p>
+        </div>
+        <a class="btn-primary" href="#">Schedule a Call</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="w">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-logo">Company<span>.</span>Name</div>
+          <p class="foot-desc">Fractional CFO services, financial planning, tax strategy, and accounting advisory for growing businesses&#8202;—&#8202;with deep specialisation in lending and healthcare.</p>
+        </div>
+        <div>
+          <div class="foot-hdg">Services</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="#">Fractional CFO</a>
+            <a class="foot-lnk" href="#">Financial Planning</a>
+            <a class="foot-lnk" href="#">Tax Strategy</a>
+            <a class="foot-lnk" href="#">Bookkeeping</a>
+            <a class="foot-lnk" href="#">Audit &amp; Compliance</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-hdg">Industries</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="#" onclick="go('lend');return false">Lenders</a>
+            <a class="foot-lnk" href="#" onclick="go('hlth');return false">Healthcare</a>
+            <a class="foot-lnk" href="#">Real Estate</a>
+            <a class="foot-lnk" href="#">Technology</a>
+            <a class="foot-lnk" href="#">Professional Services</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-hdg">Company</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="#">About</a>
+            <a class="foot-lnk" href="#">Our Team</a>
+            <a class="foot-lnk" href="#">Careers</a>
+            <a class="foot-lnk" href="#">Contact</a>
+            <a class="foot-lnk" href="#">Client Login</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bot">
+        <span class="foot-copy">&copy; 2025 Company Name. All rights reserved. &nbsp;&middot;&nbsp; CPA Licensed &nbsp;&middot;&nbsp; AICPA Member</span>
+        <span class="foot-copy">Privacy Policy &nbsp;&middot;&nbsp; Terms &nbsp;&middot;&nbsp; Disclosures</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /home -->
+
+<!-- ════════════════════════════════════════════════════════
+     LENDERS PAGE
+════════════════════════════════════════════════════════ -->
+<div class="page" id="page-lend">
+
+  <div class="ph">
+    <div class="w">
+      <div class="ph-ey">For Lending Institutions</div>
+      <h1 class="ph-h">Financial advisory built for the complexity of lending.</h1>
+      <p class="ph-sub">From community banks and credit unions to private lenders and mortgage companies&#8202;—&#8202;we understand the financial, regulatory, and reporting demands your institution carries, and we work inside them.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="#">Talk to a Lending Specialist</a>
+        <a class="btn-outline" href="#">View Services</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-strip">
+    <div class="ss-cell">
+      <div class="ss-cat">Revenue Managed</div>
+      <div class="ss-n">$600M</div>
+      <div class="ss-d">Client revenue across lending institution engagements</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-cat">Institutions Served</div>
+      <div class="ss-n">50+</div>
+      <div class="ss-d">Lenders of all sizes, from community banks to private credit</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-cat">Audit Pass Rate</div>
+      <div class="ss-n">100%</div>
+      <div class="ss-d">For clients who engaged us before their regulatory exam</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-cat">Cost Reduction</div>
+      <div class="ss-n">18%</div>
+      <div class="ss-d">Average operational cost reduction in the first 12 months</div>
+    </div>
+  </div>
+
+  <section class="offer-section">
+    <div class="w">
+      <div class="sec-header">
+        <div>
+          <div class="sec-eyebrow">Lender Services</div>
+          <h2 class="sec-h">The financial infrastructure your institution needs.</h2>
+        </div>
+        <p class="sec-p">Lending is a regulated, margin-sensitive business. Our advisors have worked inside institutions&#8202;—&#8202;not just alongside them&#8202;—&#8202;and understand the pressure on every side of the balance sheet.</p>
+      </div>
+      <div class="offer-list">
+        <div class="offer-row">
+          <div class="offer-num">01</div>
+          <div>
+            <div class="offer-name">CFO Services for Lenders</div>
+            <div class="offer-tag">Fractional CFO</div>
+          </div>
+          <div class="offer-desc">Senior financial oversight tailored to lending&#8202;—&#8202;managing loan loss reserves, investor reporting, capital adequacy planning, and operational efficiency from the CFO seat.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">02</div>
+          <div>
+            <div class="offer-name">Regulatory Compliance &amp; Reporting</div>
+            <div class="offer-tag">Compliance</div>
+          </div>
+          <div class="offer-desc">HMDA, CRA, RESPA, and TILA support. We keep your reporting current and your institution audit-ready at all times&#8202;—&#8202;not just during exam season.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">03</div>
+          <div>
+            <div class="offer-name">Portfolio Financial Analysis</div>
+            <div class="offer-tag">Analytics</div>
+          </div>
+          <div class="offer-desc">Concentration risk, default trends, yield analysis, and reserve adequacy. Deep portfolio analysis&#8202;—&#8202;before the regulator asks to see it.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">04</div>
+          <div>
+            <div class="offer-name">Borrower Financial Review</div>
+            <div class="offer-tag">Underwriting Support</div>
+          </div>
+          <div class="offer-desc">Underwriting support, financial statement analysis, and cash flow modelling to strengthen credit decisions and reduce adverse selection risk across your portfolio.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">05</div>
+          <div>
+            <div class="offer-name">Tax Strategy for Institutions</div>
+            <div class="offer-tag">Tax</div>
+          </div>
+          <div class="offer-desc">Tax planning specific to financial institutions&#8202;—&#8202;loan loss deductibility, credit considerations, and entity structure optimisation as the business scales.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">06</div>
+          <div>
+            <div class="offer-name">Investor &amp; Stakeholder Reporting</div>
+            <div class="offer-tag">Reporting</div>
+          </div>
+          <div class="offer-desc">Credible financials for investors, warehouse lines, and secondary market partners. We make your numbers tell the right story&#8202;—&#8202;accurately, and on time.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ed-section">
+    <div class="w">
+      <div class="ed-grid">
+        <div>
+          <div class="sec-eyebrow" style="margin-bottom:28px">Why We're Different</div>
+          <p class="ed-pull">"Regulatory fluency isn't awareness of the rules. It's understanding how the rules interact with your portfolio, your capital structure, and your examiners."</p>
+          <p class="ed-body">Most advisory firms can read a regulation. Fewer can apply it to your specific institution&#8202;—&#8202;to your concentrations, your covenant triggers, your board reporting requirements&#8202;—&#8202;and tell you exactly what it means for next quarter.<br><br>We've spent years inside lending institutions. We know what examiners look for, how warehouse lenders think, and what keeps a credit union's CFO up at night. That's not knowledge you can get from a textbook.</p>
+        </div>
+        <div>
+          <div class="proof-rows">
+            <div class="pr-row">
+              <div class="pr-ico">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="pr-t">Regulatory fluency, not just awareness</p>
+                <p class="pr-d">We track changes and apply them proactively to your compliance framework&#8202;—&#8202;before they create exposure.</p>
+              </div>
+            </div>
+            <div class="pr-row">
+              <div class="pr-ico">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="pr-t">Cost discipline that comes from understanding operations</p>
+                <p class="pr-d">We identify inefficiencies specific to lending operations&#8202;—&#8202;not generic overhead cuts.</p>
+              </div>
+            </div>
+            <div class="pr-row">
+              <div class="pr-ico">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="pr-t">Investor-grade reporting, every time</p>
+                <p class="pr-d">Financials that meet the standards of institutional investors and secondary market participants&#8202;—&#8202;prepared as standard, not on request.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="w">
+      <div class="cta-grid">
+        <div>
+          <h2 class="cta-h">Let's talk about your institution.</h2>
+          <p class="cta-sub">30 minutes with a lending finance specialist. No pitch&#8202;—&#8202;just a clear conversation about where your institution stands and what it needs.</p>
+        </div>
+        <a class="btn-primary" href="#">Schedule a Call</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="w">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-logo">Company<span>.</span>Name</div>
+          <p class="foot-desc">Financial advisory for lending institutions. CFO services, compliance, portfolio analysis, tax strategy, and stakeholder reporting.</p>
+        </div>
+        <div>
+          <div class="foot-hdg">Lender Services</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="#">Fractional CFO</a>
+            <a class="foot-lnk" href="#">Compliance</a>
+            <a class="foot-lnk" href="#">Portfolio Analysis</a>
+            <a class="foot-lnk" href="#">Tax Strategy</a>
+            <a class="foot-lnk" href="#">Investor Reporting</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-hdg">More</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="#" onclick="go('home');return false">Overview</a>
+            <a class="foot-lnk" href="#" onclick="go('hlth');return false">Healthcare</a>
+            <a class="foot-lnk" href="#">About</a>
+            <a class="foot-lnk" href="#">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-hdg">Legal</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="#">Privacy Policy</a>
+            <a class="foot-lnk" href="#">Terms of Service</a>
+            <a class="foot-lnk" href="#">Disclosures</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bot">
+        <span class="foot-copy">&copy; 2025 Company Name. All rights reserved. &nbsp;&middot;&nbsp; CPA Licensed &nbsp;&middot;&nbsp; AICPA Member</span>
+        <span class="foot-copy">Privacy &nbsp;&middot;&nbsp; Terms &nbsp;&middot;&nbsp; Disclosures</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /lenders -->
+
+<!-- ════════════════════════════════════════════════════════
+     HEALTHCARE PAGE
+════════════════════════════════════════════════════════ -->
+<div class="page" id="page-hlth">
+
+  <div class="ph">
+    <div class="w">
+      <div class="ph-ey">For Healthcare Practices</div>
+      <h1 class="ph-h">Accounting that understands how healthcare actually works.</h1>
+      <p class="ph-sub">Independent practices, group practices, and DSO-affiliated providers deserve financial advisors who understand payer mix, billing cycles, and reimbursement dynamics&#8202;—&#8202;not just balance sheets.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="#">Talk to a Practice Specialist</a>
+        <a class="btn-outline" href="#">View Services</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-strip">
+    <div class="ss-cell">
+      <div class="ss-cat">Revenue Managed</div>
+      <div class="ss-n">$600M</div>
+      <div class="ss-d">Client revenue across healthcare practice engagements</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-cat">Provider Investments</div>
+      <div class="ss-n">$19M</div>
+      <div class="ss-d">Provider investments under active financial planning</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-cat">Practices Served</div>
+      <div class="ss-n">80+</div>
+      <div class="ss-d">Healthcare practices across multiple specialties</div>
+    </div>
+    <div class="ss-cell">
+      <div class="ss-cat">Revenue Improvement</div>
+      <div class="ss-n">22%</div>
+      <div class="ss-d">Average revenue improvement for new healthcare clients in year one</div>
+    </div>
+  </div>
+
+  <section class="offer-section">
+    <div class="w">
+      <div class="sec-header">
+        <div>
+          <div class="sec-eyebrow">Practice Services</div>
+          <h2 class="sec-h">Every financial service a practice needs, built for the healthcare context.</h2>
+        </div>
+        <p class="sec-p">Healthcare finance is unlike any other industry. Billing cycles, payer mix, and reimbursement rates create complexity that most accountants aren't equipped to navigate. We are.</p>
+      </div>
+      <div class="offer-list">
+        <div class="offer-row">
+          <div class="offer-num">01</div>
+          <div>
+            <div class="offer-name">CFO for Medical Practices</div>
+            <div class="offer-tag">Fractional CFO</div>
+          </div>
+          <div class="offer-desc">Part-time CFO services built for practices&#8202;—&#8202;managing overhead ratios, provider productivity, expansion planning, and DSO negotiation strategy.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">02</div>
+          <div>
+            <div class="offer-name">Revenue Cycle Consulting</div>
+            <div class="offer-tag">Revenue</div>
+          </div>
+          <div class="offer-desc">We review billing operations, payer mix, denial rates, and AR ageing to identify where revenue is leaking&#8202;—&#8202;then build a concrete plan to recover and protect it.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">03</div>
+          <div>
+            <div class="offer-name">Provider Financial Planning</div>
+            <div class="offer-tag">Planning</div>
+          </div>
+          <div class="offer-desc">Personalised planning for physicians and practice owners. With $19M in provider investments under management, we connect practice finance to personal wealth strategy.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">04</div>
+          <div>
+            <div class="offer-name">Healthcare Tax Strategy</div>
+            <div class="offer-tag">Tax</div>
+          </div>
+          <div class="offer-desc">S-corp elections, retirement plan optimisation, practice expense deductibility, and ownership transition planning&#8202;—&#8202;built for medical professionals.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">05</div>
+          <div>
+            <div class="offer-name">HIPAA-Aligned Accounting</div>
+            <div class="offer-tag">Compliance</div>
+          </div>
+          <div class="offer-desc">Financial processes and data handling designed with HIPAA compliance throughout the reporting chain. Patient data integrity in every workflow we touch.</div>
+        </div>
+        <div class="offer-row">
+          <div class="offer-num">06</div>
+          <div>
+            <div class="offer-name">Practice Expansion Advisory</div>
+            <div class="offer-tag">Growth</div>
+          </div>
+          <div class="offer-desc">Adding a location, buying a practice, or joining a group? We model the deal, advise on structure, and manage the financial transition from term sheet to close.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ed-section">
+    <div class="w">
+      <div class="ed-grid">
+        <div>
+          <div class="sec-eyebrow" style="margin-bottom:28px">Built for Healthcare</div>
+          <p class="ed-pull">"Most accountants don't know what a CPT code is. We know what it means for your reimbursement rate, your payer contract, and your bottom line."</p>
+          <p class="ed-body">Healthcare finance is built on concepts&#8202;—&#8202;payer mix, denials, RVUs, DSO multiples&#8202;—&#8202;that take years to understand in context. Our advisors have that context from the ground up.<br><br>With $19M in provider investments under management, we don't just advise on the practice. We connect your practice's performance to your personal financial picture&#8202;—&#8202;retirement planning, investment strategy, and ownership transition&#8202;—&#8202;so every financial decision serves the whole.</p>
+        </div>
+        <div>
+          <div class="proof-rows">
+            <div class="pr-row">
+              <div class="pr-ico">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="pr-t">Payer and billing fluency</p>
+                <p class="pr-d">We understand denial management, reimbursement rates, and payer mix in ways general accountants simply don't.</p>
+              </div>
+            </div>
+            <div class="pr-row">
+              <div class="pr-ico">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="pr-t">Practice and personal, integrated</p>
+                <p class="pr-d">$19M in provider investments&#8202;—&#8202;we connect practice performance to personal wealth strategy as a single financial picture.</p>
+              </div>
+            </div>
+            <div class="pr-row">
+              <div class="pr-ico">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <p class="pr-t">Transition-ready at every stage</p>
+                <p class="pr-d">Growing, exploring a DSO deal, or planning an exit&#8202;—&#8202;we've advised through every scenario and know the financial structure that works best at each.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="w">
+      <div class="cta-grid">
+        <div>
+          <h2 class="cta-h">Let's talk about your practice.</h2>
+          <p class="cta-sub">30 minutes with a healthcare finance specialist. No generic advice&#8202;—&#8202;a real conversation about your practice, your payer mix, and your goals.</p>
+        </div>
+        <a class="btn-primary" href="#">Schedule a Call</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="w">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-logo">Company<span>.</span>Name</div>
+          <p class="foot-desc">Financial advisory purpose-built for healthcare practices. Revenue cycle, tax, provider financial planning, and CFO services for practices that are built to grow.</p>
+        </div>
+        <div>
+          <div class="foot-hdg">Practice Services</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="#">Fractional CFO</a>
+            <a class="foot-lnk" href="#">Revenue Cycle</a>
+            <a class="foot-lnk" href="#">Tax Strategy</a>
+            <a class="foot-lnk" href="#">Financial Planning</a>
+            <a class="foot-lnk" href="#">Expansion Advisory</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-hdg">More</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="#" onclick="go('home');return false">Overview</a>
+            <a class="foot-lnk" href="#" onclick="go('lend');return false">Lenders</a>
+            <a class="foot-lnk" href="#">About</a>
+            <a class="foot-lnk" href="#">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-hdg">Legal</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="#">Privacy Policy</a>
+            <a class="foot-lnk" href="#">Terms of Service</a>
+            <a class="foot-lnk" href="#">Disclosures</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bot">
+        <span class="foot-copy">&copy; 2025 Company Name. All rights reserved. &nbsp;&middot;&nbsp; CPA Licensed &nbsp;&middot;&nbsp; AICPA Member</span>
+        <span class="foot-copy">Privacy &nbsp;&middot;&nbsp; Terms &nbsp;&middot;&nbsp; Disclosures</span>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /healthcare -->
+
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nl').forEach(l=>l.classList.remove('on'));
+  document.getElementById('page-'+id).classList.add('on');
+  const nl=document.getElementById('nl-'+id);
+  if(nl)nl.classList.add('on');
+  window.scrollTo({top:0,behavior:'instant'});
+}
+const mobBtn=document.getElementById('mobBtn');
+const mobMenu=document.getElementById('mobMenu');
+mobBtn.addEventListener('click',()=>mobMenu.classList.toggle('open'));
+function closeMob(){mobMenu.classList.remove('open')}
+</script>
