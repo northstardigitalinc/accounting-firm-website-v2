@@ -1093,8 +1093,17 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 <nav class="nav">
   <div class="w">
     <div class="nav-inner">
-      <a class="logo" href="#" onclick="go('home');return false" aria-label="Books To Capital — Home">
-        <img src="Copy of BTC Logo-Photoroom.png" alt="Books To Capital" style="height:70px;display:block;width:auto">
+      <a class="logo" href="#" onclick="go('home');return false" aria-label="Books To Capital — Home" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+        <div style="height:58px;overflow:hidden;flex-shrink:0">
+          <img src="Copy of BTC Logo-Photoroom.png" alt="" style="height:84px;display:block;width:auto">
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 38" height="28" style="display:block;flex-shrink:0;overflow:visible" aria-label="Books To Capital">
+          <text y="32" font-family="Georgia,'Times New Roman',serif" font-size="30" font-variant="small-caps">
+            <tspan fill="#052959">Books </tspan><tspan fill="#8B6B14">To</tspan><tspan fill="#333333"> Capital</tspan>
+          </text>
+          <line x1="100" y1="7" x2="126" y2="7" stroke="#8B6B14" stroke-width="2.2" stroke-linecap="round"/>
+          <polyline points="121,3.5 126,7 121,10.5" fill="none" stroke="#8B6B14" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
       </a>
       <div class="nav-links">
         <a class="nl on" id="nl-home" href="#" onclick="go('home');return false">Home</a>
