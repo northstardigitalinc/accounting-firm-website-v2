@@ -204,7 +204,7 @@ svg{display:block}
 /* Hero stat strip — typography only, no cards */
 .hero-stats{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns:1fr 1fr 1fr 1fr;
   border-top:1px solid var(--rim);
 }
 .hstat{padding:44px 0 52px;position:relative}
@@ -693,7 +693,7 @@ footer{border-top:1px solid var(--rim);padding:64px 0 40px}
 
   /* Hero stat strip: 2-col */
   .hero-stats{grid-template-columns:1fr 1fr}
-  .hstat:last-child{display:none}
+  .hstat:last-child{display:block}
   .hstat+.hstat{padding-left:18px}
   .hstat{padding:32px 0 40px}
   .hstat-n{font-size:clamp(2rem,8vw,3rem)}
@@ -1111,19 +1111,24 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
       <!-- Stat strip — editorial typography only, no cards -->
       <div class="hero-stats">
         <div class="hstat">
-          <div class="hstat-label">Fractional CFO</div>
+          <div class="hstat-label">Personal Client AUM</div>
+          <div class="hstat-n" style="color:var(--emerald)">$19M</div>
+          <div class="hstat-desc">Personal client investments under active management</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-label">Corporate Operations</div>
           <div class="hstat-n" style="color:var(--emerald)">$600M</div>
-          <div class="hstat-desc">Total client revenue under active financial advisory</div>
+          <div class="hstat-desc">Corporate client operations supported across all service lines</div>
         </div>
         <div class="hstat">
-          <div class="hstat-label">Financial Analysis</div>
-          <div class="hstat-n" style="color:var(--emerald)">Monthly</div>
-          <div class="hstat-desc">Reporting, forecasting and KPI dashboards delivered to clients</div>
+          <div class="hstat-label">Experience</div>
+          <div class="hstat-n">20+ yrs</div>
+          <div class="hstat-desc">Combined experience across accounting, tax, and financial advisory</div>
         </div>
         <div class="hstat">
-          <div class="hstat-label">Client Retention</div>
-          <div class="hstat-n">97%</div>
-          <div class="hstat-desc">Year-over-year retention across all service lines</div>
+          <div class="hstat-label">Offices</div>
+          <div class="hstat-n">2</div>
+          <div class="hstat-desc">Mississauga &amp; Winnipeg — serving clients across Canada</div>
         </div>
       </div>
     </div>
