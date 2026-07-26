@@ -837,12 +837,16 @@ footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:36px 0 24px}
 /* ── Small mobile (≤420px) ─────────────────────────────── */
 @media(max-width:420px){
   .w{padding:0 16px}
-  .hero-stats{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr;gap:0}
+  .hstat{padding:32px 0}
   .hstat+.hstat{
     padding-left:0;border-left:none;
-    border-top:1px solid var(--rim);padding-top:28px;
+    border-top:1px solid var(--rim);padding-top:32px;margin-top:0;
   }
   .hstat:last-child{display:block}
+  .hstat-label{margin-bottom:10px}
+  .hstat-n{margin-bottom:10px}
+  .hstat-desc{font-size:14px;line-height:1.6}
   .ds-secondary{flex-direction:column;gap:28px}
   .stat-strip{grid-template-columns:1fr}
   .ss-cell{border-right:none}
