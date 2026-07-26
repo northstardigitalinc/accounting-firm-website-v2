@@ -279,7 +279,7 @@ svg{display:block}
   align-self:end;
 }
 .svc-list{border-top:1px solid var(--rim)}
-.svc-group-label{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#052959;padding:20px 0 4px;border-bottom:1px solid var(--rim);margin-bottom:0;opacity:.7}
+.svc-group-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C59B3B;padding:28px 0 10px;border-bottom:2px solid #C59B3B;margin-bottom:4px;}
 .svc-row{
   border-bottom:1px solid var(--rim);
   cursor:pointer;
@@ -307,8 +307,9 @@ svg{display:block}
   display:inline-block;
   font-size:10px;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;
-  color:#052959;
-  border:1px solid rgba(5,41,89,.2);
+  color:#7A5E1A;
+  background:rgba(197,155,59,.12);
+  border:1px solid rgba(197,155,59,.4);
   padding:2px 8px;border-radius:var(--pill);
   margin-top:7px;
 }
@@ -2047,26 +2048,29 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
   <div class="sp-toc">
     <div class="w">
       <div class="sp-toc-inner">
-        <span class="sp-toc-lnk" onclick="document.getElementById('svc-bk').scrollIntoView({behavior:'smooth'})">01 &nbsp; Bookkeeping</span>
-        <span class="sp-toc-lnk" onclick="document.getElementById('svc-tax').scrollIntoView({behavior:'smooth'})">02 &nbsp; Tax Preparation</span>
-        <span class="sp-toc-lnk" onclick="document.getElementById('svc-pay').scrollIntoView({behavior:'smooth'})">03 &nbsp; Payroll &amp; Contractors</span>
-        <span class="sp-toc-lnk" onclick="document.getElementById('svc-gst').scrollIntoView({behavior:'smooth'})">04 &nbsp; GST/HST/PST</span>
-        <span class="sp-toc-lnk" onclick="document.getElementById('svc-cfo').scrollIntoView({behavior:'smooth'})">05 &nbsp; Fractional CFO</span>
-        <span class="sp-toc-lnk" onclick="document.getElementById('svc-fa').scrollIntoView({behavior:'smooth'})">06 &nbsp; Financial Analysis</span>
-        <span class="sp-toc-lnk" onclick="document.getElementById('svc-cap').scrollIntoView({behavior:'smooth'})">07 &nbsp; Capital Access</span>
-        <span class="sp-toc-lnk" onclick="document.getElementById('svc-adv').scrollIntoView({behavior:'smooth'})">08 &nbsp; Consulting</span>
+        <span class="sp-toc-lnk" onclick="document.getElementById('svc-bk').scrollIntoView({behavior:'smooth'})">01 &nbsp; Bookkeeping &amp; Catch-Up</span>
+        <span class="sp-toc-lnk" onclick="document.getElementById('svc-tax').scrollIntoView({behavior:'smooth'})">02 &nbsp; Corporate &amp; Personal Tax</span>
+        <span class="sp-toc-lnk" onclick="document.getElementById('svc-gst').scrollIntoView({behavior:'smooth'})">03 &nbsp; GST / HST / PST Filing</span>
+        <span class="sp-toc-lnk" onclick="document.getElementById('svc-pay').scrollIntoView({behavior:'smooth'})">04 &nbsp; Payroll / T4 &amp; T4A</span>
+        <span class="sp-toc-lnk" onclick="document.getElementById('svc-cap').scrollIntoView({behavior:'smooth'})">05 &nbsp; Funding Preparation</span>
+        <span class="sp-toc-lnk" onclick="document.getElementById('svc-fa').scrollIntoView({behavior:'smooth'})">06 &nbsp; Analysis &amp; Forecasting</span>
+        <span class="sp-toc-lnk" onclick="document.getElementById('svc-cfo').scrollIntoView({behavior:'smooth'})">07 &nbsp; Fractional CFO Services</span>
+        <span class="sp-toc-lnk" onclick="document.getElementById('svc-adv').scrollIntoView({behavior:'smooth'})">08 &nbsp; Business Consulting</span>
       </div>
     </div>
   </div>
 
-  <!-- ─── 01 Bookkeeping ──────────────────────────────────── -->
+  <!-- ── Accounting Services ─────────────────────────────────── -->
+  <div class="sp-group-label"><div class="w">Accounting Services</div></div>
+
+  <!-- ─── 01 Bookkeeping & Catch-Up ───────────────────────── -->
   <section class="sp-service" id="svc-bk">
     <div class="w">
       <div class="sp-svc-grid">
         <div class="sp-aside">
           <div class="sp-svc-num">01</div>
-          <div class="sp-svc-name">Bookkeeping</div>
-          <div class="sp-svc-cat">Foundation</div>
+          <div class="sp-svc-name">Bookkeeping &amp; Catch-Up</div>
+          <div class="sp-svc-cat">Accounting Services</div>
           <p class="sp-svc-summary">Clean, accurate financial records every month. Timely management accounts and statements that give you a reliable picture of the business, not a surprise at year-end.</p>
           <div class="sp-tag-row">
             <span class="sp-tag">Reconciliation</span>
@@ -2110,14 +2114,14 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     </div>
   </section>
 
-  <!-- ─── 02 Tax Preparation ──────────────────────────────── -->
+  <!-- ─── 02 Corporate & Personal Tax ─────────────────────── -->
   <section class="sp-service" id="svc-tax">
     <div class="w">
       <div class="sp-svc-grid">
         <div class="sp-aside">
           <div class="sp-svc-num">02</div>
-          <div class="sp-svc-name">Tax Preparation</div>
-          <div class="sp-svc-cat">Tax</div>
+          <div class="sp-svc-name">Corporate &amp; Personal Tax</div>
+          <div class="sp-svc-cat">Accounting Services</div>
           <p class="sp-svc-summary">Accurate, on-time filing for personal and corporate returns. T1s, T2s, family returns for business owners, prior-year catch-up filings, and CRA correspondence — handled completely.</p>
           <div class="sp-tag-row">
             <span class="sp-tag">T1</span>
@@ -2168,65 +2172,14 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     </div>
   </section>
 
-  <!-- ─── 03 Payroll & Contractor Services ─────────────────── -->
-  <section class="sp-service" id="svc-pay">
-    <div class="w">
-      <div class="sp-svc-grid">
-        <div class="sp-aside">
-          <div class="sp-svc-num">03</div>
-          <div class="sp-svc-name">Payroll &amp; Contractor Services</div>
-          <div class="sp-svc-cat">Payroll</div>
-          <p class="sp-svc-summary">Full payroll processing and contractor management — from remittances and T4 preparation to contractor invoice tracking and T4A filing, handled accurately and on time.</p>
-          <div class="sp-tag-row">
-            <span class="sp-tag">Payroll</span>
-            <span class="sp-tag">Remittances</span>
-            <span class="sp-tag">T4</span>
-            <span class="sp-tag">T4A</span>
-          </div>
-        </div>
-        <div class="sp-main">
-          <div class="sp-block">
-            <div class="sp-block-title">What Is Included</div>
-            <ul class="sp-ul">
-              <li>Payroll processing (weekly, bi-weekly, semi-monthly, or monthly)</li>
-              <li>CRA payroll remittances (CPP, EI, income tax source deductions)</li>
-              <li>T4 and T4 Summary preparation and filing by the February 28 deadline</li>
-              <li>Contractor invoice and payment tracking</li>
-              <li>T4A preparation and filing for contractors and service providers</li>
-              <li>Record of Employment (ROE) preparation when required</li>
-            </ul>
-          </div>
-          <div class="sp-block">
-            <div class="sp-block-title">Regulatory Requirements</div>
-            <div class="sp-block-body">
-              <p>Payroll processing in Canada must comply with the Canada Pension Plan Act, the Employment Insurance Act, and applicable provincial employment standards legislation. We process remittances in accordance with CRA requirements and file T4 and T4A information returns annually by the February 28 deadline.</p>
-              <p>Contractor classification (employee vs. independent contractor) carries regulatory and tax implications. Where there is ambiguity, we will flag this for review before onboarding a worker under contractor arrangements.</p>
-            </div>
-          </div>
-          <div class="sp-block">
-            <div class="sp-block-title">Required Documentation</div>
-            <div class="sp-forms">
-              <div class="sp-form-row"><div class="sp-form-id">Engagement Letter</div></div>
-              <div class="sp-form-row"><div class="sp-form-id">PD27 (10% Temporary Wage Subsidy, if applicable)</div></div>
-              <div class="sp-form-row"><div class="sp-form-id">TD1 / TD1ON (employee personal tax credits)</div></div>
-            </div>
-          </div>
-          <div class="sp-notice">
-            <p class="sp-notice-text"><strong>Note:</strong> Payroll remittances are due on a schedule set by CRA based on your average monthly withholding. Late remittances attract penalties and interest. We will advise you of your remittance schedule and deadlines as part of onboarding.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── 04 GST/HST/PST Services ──────────────────────────── -->
+  <!-- ─── 03 GST / HST / PST Filing ───────────────────────── -->
   <section class="sp-service" id="svc-gst">
     <div class="w">
       <div class="sp-svc-grid">
         <div class="sp-aside">
-          <div class="sp-svc-num">04</div>
-          <div class="sp-svc-name">GST/HST/PST Services</div>
-          <div class="sp-svc-cat">Tax Compliance</div>
+          <div class="sp-svc-num">03</div>
+          <div class="sp-svc-name">GST / HST / PST Filing</div>
+          <div class="sp-svc-cat">Accounting Services</div>
           <p class="sp-svc-summary">GST/HST/PST returns prepared and filed on time, every period. We track filing periods, review input tax credits, and handle catch-up or correction of overdue filings.</p>
           <div class="sp-tag-row">
             <span class="sp-tag">GST/HST</span>
@@ -2270,14 +2223,170 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     </div>
   </section>
 
-  <!-- ─── 05 Fractional CFO ─────────────────────────────────── -->
-  <section class="sp-service" id="svc-cfo">
+  <!-- ─── 04 Payroll / T4 & T4A ───────────────────────────── -->
+  <section class="sp-service" id="svc-pay">
+    <div class="w">
+      <div class="sp-svc-grid">
+        <div class="sp-aside">
+          <div class="sp-svc-num">04</div>
+          <div class="sp-svc-name">Payroll / T4 &amp; T4A</div>
+          <div class="sp-svc-cat">Accounting Services</div>
+          <p class="sp-svc-summary">Full payroll processing and contractor management — from remittances and T4 preparation to contractor invoice tracking and T4A filing, handled accurately and on time.</p>
+          <div class="sp-tag-row">
+            <span class="sp-tag">Payroll</span>
+            <span class="sp-tag">Remittances</span>
+            <span class="sp-tag">T4</span>
+            <span class="sp-tag">T4A</span>
+          </div>
+        </div>
+        <div class="sp-main">
+          <div class="sp-block">
+            <div class="sp-block-title">What Is Included</div>
+            <ul class="sp-ul">
+              <li>Payroll processing (weekly, bi-weekly, semi-monthly, or monthly)</li>
+              <li>CRA payroll remittances (CPP, EI, income tax source deductions)</li>
+              <li>T4 and T4 Summary preparation and filing by the February 28 deadline</li>
+              <li>Contractor invoice and payment tracking</li>
+              <li>T4A preparation and filing for contractors and service providers</li>
+              <li>Record of Employment (ROE) preparation when required</li>
+            </ul>
+          </div>
+          <div class="sp-block">
+            <div class="sp-block-title">Regulatory Requirements</div>
+            <div class="sp-block-body">
+              <p>Payroll processing in Canada must comply with the Canada Pension Plan Act, the Employment Insurance Act, and applicable provincial employment standards legislation. We process remittances in accordance with CRA requirements and file T4 and T4A information returns annually by the February 28 deadline.</p>
+              <p>Contractor classification (employee vs. independent contractor) carries regulatory and tax implications. Where there is ambiguity, we will flag this for review before onboarding a worker under contractor arrangements.</p>
+            </div>
+          </div>
+          <div class="sp-block">
+            <div class="sp-block-title">Required Documentation</div>
+            <div class="sp-forms">
+              <div class="sp-form-row"><div class="sp-form-id">Engagement Letter</div></div>
+              <div class="sp-form-row"><div class="sp-form-id">PD27 (10% Temporary Wage Subsidy, if applicable)</div></div>
+              <div class="sp-form-row"><div class="sp-form-id">TD1 / TD1ON (employee personal tax credits)</div></div>
+            </div>
+          </div>
+          <div class="sp-notice">
+            <p class="sp-notice-text"><strong>Note:</strong> Payroll remittances are due on a schedule set by CRA based on your average monthly withholding. Late remittances attract penalties and interest. We will advise you of your remittance schedule and deadlines as part of onboarding.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Advisory Services ─────────────────────────────────── -->
+  <div class="sp-group-label"><div class="w">Advisory Services</div></div>
+
+  <!-- ─── 05 Funding Preparation ──────────────────────────── -->
+  <section class="sp-service" id="svc-cap">
     <div class="w">
       <div class="sp-svc-grid">
         <div class="sp-aside">
           <div class="sp-svc-num">05</div>
+          <div class="sp-svc-name">Funding Preparation</div>
+          <div class="sp-svc-cat">Advisory Services</div>
+          <p class="sp-svc-summary">We help businesses determine whether they are financially ready for funding, clean up their records, prepare lender packages, and support the process through to closing.</p>
+          <div class="sp-tag-row">
+            <span class="sp-tag">Capital Readiness</span>
+            <span class="sp-tag">Lender Prep</span>
+            <span class="sp-tag">Deal Support</span>
+            <span class="sp-tag">Forecasting</span>
+          </div>
+        </div>
+        <div class="sp-main">
+          <div class="sp-block">
+            <div class="sp-block-title">What Is Included</div>
+            <ul class="sp-ul">
+              <li>Reviewing whether a business is financially ready for funding</li>
+              <li>Cleaning up financial records before approaching lenders</li>
+              <li>Preparing financial forecasts and lender presentations</li>
+              <li>Documenting the proposed use of funds clearly and specifically</li>
+              <li>Coordinating information requested by lenders throughout the process</li>
+              <li>Cash-flow analysis and debt-service capacity assessment</li>
+              <li>CRA good-standing review (corporate and personal tax filings)</li>
+              <li>GST/HST account status review</li>
+              <li>Supporting the process from preparation through funding and closing</li>
+            </ul>
+          </div>
+          <div class="sp-block">
+            <div class="sp-block-title">Examples of Funding Purposes We Support</div>
+            <ul class="sp-ul">
+              <li>Refinancing existing debt</li>
+              <li>Working capital</li>
+              <li>Equipment purchases</li>
+              <li>Office or facility renovations</li>
+              <li>Opening another location</li>
+              <li>Acquiring another business</li>
+              <li>Purchasing commercial property</li>
+            </ul>
+          </div>
+          <div class="sp-block">
+            <div class="sp-block-title">How It Works</div>
+            <div class="sp-block-body">
+              <p>We begin with a preliminary review to assess the current state of the business's financial records, tax standing, and overall readiness to approach a lender. From there, we identify the gaps, prioritize the cleanup or preparation work required, and coordinate the information as the lender process moves forward.</p>
+              <p>We are not mortgage brokers, credit arrangers, or lending intermediaries. Our role is entirely on the financial preparation side. We do not arrange credit, negotiate loan terms, or act as intermediaries between borrowers and lenders.</p>
+            </div>
+          </div>
+          <div class="sp-notice">
+            <p class="sp-notice-text"><strong>Scope:</strong> Funding preparation services are advisory and operational in nature. We prepare financial information and coordinate documentation. Lending decisions are made exclusively by the lender. We do not guarantee funding outcomes, represent lenders, or provide mortgage brokerage services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 06 Analysis & Forecasting ───────────────────────── -->
+  <section class="sp-service" id="svc-fa">
+    <div class="w">
+      <div class="sp-svc-grid">
+        <div class="sp-aside">
+          <div class="sp-svc-num">06</div>
+          <div class="sp-svc-name">Analysis &amp; Forecasting</div>
+          <div class="sp-svc-cat">Advisory Services</div>
+          <p class="sp-svc-summary">We turn your financial data into clear, actionable information. Monthly and quarterly reporting, KPI dashboards, revenue and expense analysis, financial forecasts, and scenario planning — so you can make confident decisions.</p>
+          <div class="sp-tag-row">
+            <span class="sp-tag">Forecasting</span>
+            <span class="sp-tag">KPIs</span>
+            <span class="sp-tag">Reporting</span>
+            <span class="sp-tag">Scenarios</span>
+          </div>
+        </div>
+        <div class="sp-main">
+          <div class="sp-block">
+            <div class="sp-block-title">What Is Included</div>
+            <ul class="sp-ul">
+              <li>Financial forecasting (12–24 months)</li>
+              <li>Monthly and quarterly financial reporting packages</li>
+              <li>KPI dashboards tailored to your business</li>
+              <li>Revenue and expense trend analysis</li>
+              <li>Business performance tracking against budget or prior periods</li>
+              <li>Scenario analysis for major business decisions</li>
+              <li>Cash-flow projections and monitoring</li>
+              <li>Lender-ready reporting packages and management presentations</li>
+            </ul>
+          </div>
+          <div class="sp-block">
+            <div class="sp-block-title">How It Works</div>
+            <div class="sp-block-body">
+              <p>Financial analysis services are typically built on top of clean bookkeeping. If your records need catch-up or cleanup first, we handle that under our bookkeeping service before beginning the reporting and analysis layer. Deliverables are agreed in advance and included in your engagement letter.</p>
+            </div>
+          </div>
+          <div class="sp-notice">
+            <p class="sp-notice-text"><strong>Note:</strong> Want to understand what financial reporting and analysis would look like for your business? Book a free 30-minute discovery call and we will walk through your current financial picture and what a reporting setup would involve. <a href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener" style="color:var(--teal)">Schedule a Free Call</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 07 Fractional CFO Services ──────────────────────── -->
+  <section class="sp-service" id="svc-cfo">
+    <div class="w">
+      <div class="sp-svc-grid">
+        <div class="sp-aside">
+          <div class="sp-svc-num">07</div>
           <div class="sp-svc-name">Fractional CFO Services</div>
-          <div class="sp-svc-cat">Flagship</div>
+          <div class="sp-svc-cat">Advisory Services</div>
           <p class="sp-svc-summary">Senior financial leadership embedded in your business on a part-time basis. We act as your CFO without the full-time salary — managing cash flow, supporting business decisions, and participating in your planning meetings.</p>
           <div class="sp-tag-row">
             <span class="sp-tag">Cash Flow</span>
@@ -2322,116 +2431,14 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     </div>
   </section>
 
-  <!-- ─── 06 Financial Analysis ────────────────────────────── -->
-  <section class="sp-service" id="svc-fa">
-    <div class="w">
-      <div class="sp-svc-grid">
-        <div class="sp-aside">
-          <div class="sp-svc-num">06</div>
-          <div class="sp-svc-name">Financial Analysis</div>
-          <div class="sp-svc-cat">Analysis</div>
-          <p class="sp-svc-summary">We turn your financial data into clear, actionable information. Monthly and quarterly reporting, KPI dashboards, revenue and expense analysis, financial forecasts, and scenario planning — so you can make confident decisions.</p>
-          <div class="sp-tag-row">
-            <span class="sp-tag">Forecasting</span>
-            <span class="sp-tag">KPIs</span>
-            <span class="sp-tag">Reporting</span>
-            <span class="sp-tag">Scenarios</span>
-          </div>
-        </div>
-        <div class="sp-main">
-          <div class="sp-block">
-            <div class="sp-block-title">What Is Included</div>
-            <ul class="sp-ul">
-              <li>Financial forecasting (12–24 months)</li>
-              <li>Monthly and quarterly financial reporting packages</li>
-              <li>KPI dashboards tailored to your business</li>
-              <li>Revenue and expense trend analysis</li>
-              <li>Business performance tracking against budget or prior periods</li>
-              <li>Scenario analysis for major business decisions</li>
-              <li>Cash-flow projections and monitoring</li>
-              <li>Lender-ready reporting packages and management presentations</li>
-            </ul>
-          </div>
-          <div class="sp-block">
-            <div class="sp-block-title">How It Works</div>
-            <div class="sp-block-body">
-              <p>Financial analysis services are typically built on top of clean bookkeeping. If your records need catch-up or cleanup first, we handle that under our bookkeeping service before beginning the reporting and analysis layer. Deliverables are agreed in advance and included in your engagement letter.</p>
-            </div>
-          </div>
-          <div class="sp-notice">
-            <p class="sp-notice-text"><strong>Note:</strong> Want to understand what financial reporting and analysis would look like for your business? Book a free 30-minute discovery call and we will walk through your current financial picture and what a reporting setup would involve. <a href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener" style="color:var(--teal)">Schedule a Free Call</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── 07 Capital Access Preparation ─────────────────────── -->
-  <section class="sp-service" id="svc-cap">
-    <div class="w">
-      <div class="sp-svc-grid">
-        <div class="sp-aside">
-          <div class="sp-svc-num">07</div>
-          <div class="sp-svc-name">Capital Access Preparation &amp; Deal Support</div>
-          <div class="sp-svc-cat">Capital Readiness</div>
-          <p class="sp-svc-summary">We help businesses determine whether they are financially ready for funding, clean up their records, prepare lender packages, and support the process through to closing.</p>
-          <div class="sp-tag-row">
-            <span class="sp-tag">Capital Readiness</span>
-            <span class="sp-tag">Lender Prep</span>
-            <span class="sp-tag">Deal Support</span>
-            <span class="sp-tag">Forecasting</span>
-          </div>
-        </div>
-        <div class="sp-main">
-          <div class="sp-block">
-            <div class="sp-block-title">What Is Included</div>
-            <ul class="sp-ul">
-              <li>Reviewing whether a business is financially ready for funding</li>
-              <li>Cleaning up financial records before approaching lenders</li>
-              <li>Preparing financial forecasts and lender presentations</li>
-              <li>Documenting the proposed use of funds clearly and specifically</li>
-              <li>Coordinating information requested by lenders throughout the process</li>
-              <li>Cash-flow analysis and debt-service capacity assessment</li>
-              <li>CRA good-standing review (corporate and personal tax filings)</li>
-              <li>GST/HST account status review</li>
-              <li>Supporting the process from preparation through funding and closing</li>
-            </ul>
-          </div>
-          <div class="sp-block">
-            <div class="sp-block-title">Examples of Funding Purposes We Support</div>
-            <ul class="sp-ul">
-              <li>Refinancing existing debt</li>
-              <li>Working capital</li>
-              <li>Equipment purchases</li>
-              <li>Clinic or office renovations</li>
-              <li>Opening another location</li>
-              <li>Acquiring another practice or business</li>
-              <li>Purchasing commercial property</li>
-            </ul>
-          </div>
-          <div class="sp-block">
-            <div class="sp-block-title">How It Works</div>
-            <div class="sp-block-body">
-              <p>We begin with a preliminary review to assess the current state of the business's financial records, tax standing, and overall readiness to approach a lender. From there, we identify the gaps, prioritize the cleanup or preparation work required, and coordinate the information as the lender process moves forward.</p>
-              <p>We are not mortgage brokers, credit arrangers, or lending intermediaries. Our role is entirely on the financial preparation side. We do not arrange credit, negotiate loan terms, or act as intermediaries between borrowers and lenders.</p>
-            </div>
-          </div>
-          <div class="sp-notice">
-            <p class="sp-notice-text"><strong>Scope:</strong> Capital access preparation services are advisory and operational in nature. We prepare financial information and coordinate documentation. Lending decisions are made exclusively by the lender. We do not guarantee funding outcomes, represent lenders, or provide mortgage brokerage services.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── 08 Business, Financial, Project & Tax Consulting ──── -->
+  <!-- ─── 08 Business Consulting ──────────────────────────── -->
   <section class="sp-service" id="svc-adv">
     <div class="w">
       <div class="sp-svc-grid">
         <div class="sp-aside">
           <div class="sp-svc-num">08</div>
-          <div class="sp-svc-name">Business, Financial, Project &amp; Tax Consulting</div>
-          <div class="sp-svc-cat">Consulting</div>
+          <div class="sp-svc-name">Business Consulting</div>
+          <div class="sp-svc-cat">Advisory Services</div>
           <p class="sp-svc-summary">Hourly professional input on business decisions, financial questions, project assessments, and tax matters. Conversational — no deliverables or reports. A clear, direct answer from a CPA who understands your situation.</p>
           <div class="sp-tag-row">
             <span class="sp-tag">Hourly</span>
