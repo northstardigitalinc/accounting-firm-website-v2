@@ -776,7 +776,7 @@ footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:36px 0 24px}
 
   /* Inner page hero */
   .ph{padding:52px 0 60px}
-  .ph-h{margin-bottom:18px}
+  .ph-h{margin-bottom:18px;font-size:clamp(2rem,8.5vw,2.75rem);line-height:1.1}
   .ph-sub{font-size:1.0625rem;line-height:1.72;margin-bottom:32px}
   .ph .hero-btns{flex-direction:column;gap:12px}
   .ph .hero-btns .btn-primary,
@@ -1005,7 +1005,7 @@ footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:36px 0 24px}
 .value-body{font-size:.875rem;font-weight:300;color:var(--lo);line-height:1.7}
 @media(max-width:900px){
   .about-grid{grid-template-columns:1fr;gap:48px;padding:56px 0}
-  .founder-grid{grid-template-columns:1fr;max-width:480px}
+  .founder-grid{grid-template-columns:1fr;max-width:540px}
   .values-grid{grid-template-columns:1fr 1fr;gap:20px}
   .about-founders,.about-values{padding:56px 0}
 }
@@ -1057,6 +1057,46 @@ footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:36px 0 24px}
   .about-inner-grid{grid-template-columns:1fr!important;gap:48px!important}
   .founder-grid{grid-template-columns:1fr}
   .values-grid{grid-template-columns:1fr}
+}
+
+/* ── Trained professionals grid ── */
+.pro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.pro-card{background:var(--depth);border:1px solid var(--rim);border-radius:10px;padding:36px 32px}
+.pro-icon{width:48px;height:48px;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.pro-label{font-size:.6875rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.pro-details{border:none;background:none}
+.pro-details summary{list-style:none;font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--hi);margin-bottom:14px}
+.pro-details summary::-webkit-details-marker{display:none}
+.pro-details summary::marker{display:none}
+.pro-body{font-size:.9rem;font-weight:300;color:var(--lo);line-height:1.72;margin-top:10px}
+@media(min-width:769px){
+  .pro-details{display:block}
+  .pro-details summary{pointer-events:none;cursor:default}
+  .pro-details[open] .pro-body,.pro-details .pro-body{display:block}
+}
+@media(max-width:768px){
+  .pro-grid{grid-template-columns:1fr;gap:0;border:1px solid var(--rim);border-radius:10px;overflow:hidden}
+  .pro-card{border:none;border-bottom:1px solid var(--rim);border-radius:0;padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+  .pro-card:last-child{border-bottom:none}
+  .pro-icon{flex-shrink:0;width:40px;height:40px;margin-bottom:0}
+  .pro-label{font-size:.6rem;letter-spacing:.11em;margin-bottom:4px}
+  .pro-details summary{font-size:.9375rem;margin-bottom:0;display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer}
+  .pro-details summary::after{content:'+';font-size:1.1rem;font-weight:300;color:var(--dim);flex-shrink:0;transition:transform .2s}
+  .pro-details[open] summary::after{content:'−'}
+  .pro-body{font-size:.85rem;line-height:1.68;margin-top:10px}
+}
+/* ── Founder bio dropdown ── */
+.founder-bio-details{border:none;background:none;margin-bottom:16px}
+.founder-bio-details summary{list-style:none;font-size:.8125rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);cursor:pointer;display:flex;align-items:center;gap:6px}
+.founder-bio-details summary::-webkit-details-marker{display:none}
+.founder-bio-details summary::marker{display:none}
+.founder-bio-details summary::after{content:'+';font-size:1rem;font-weight:300;transition:transform .2s}
+.founder-bio-details[open] summary::after{content:'−'}
+.founder-bio-details .founder-bio{margin-top:10px}
+@media(min-width:769px){
+  .founder-bio-details{display:block}
+  .founder-bio-details summary{display:none}
+  .founder-bio-details .founder-bio{display:block!important}
 }
 
 /* ── Contact form ── */
@@ -2672,7 +2712,10 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="founder-body">
             <div class="founder-name">Gary Ludhar</div>
             <div class="founder-title">Director, Business Solutions</div>
-            <p class="founder-bio">Gary leads client-facing business solutions at Books To Capital, helping owner-managed businesses get their financials in order, prepare for capital, and build sustainable growth. Based in Mississauga, he works directly with clients across Ontario.</p>
+            <details class="founder-bio-details">
+              <summary>About Gary</summary>
+              <p class="founder-bio">Gary leads client-facing business solutions at Books To Capital, helping owner-managed businesses get their financials in order, prepare for capital, and build sustainable growth. Based in Mississauga, he works directly with clients across Ontario.</p>
+            </details>
             <div class="founder-creds">
               <span class="founder-cred">Mississauga, ON</span>
               <span class="founder-cred">Business Solutions</span>
@@ -2706,7 +2749,10 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="founder-body">
             <div class="founder-name">Manny Kanda</div>
             <div class="founder-title">Business Director, MBA, PMP</div>
-            <p class="founder-bio">Manny leads business development and strategic direction at Books To Capital, bringing expertise in project management and organizational growth. Based in Winnipeg, he works with owner-managed businesses across Canada to build scalable, capital-ready operations.</p>
+            <details class="founder-bio-details">
+              <summary>About Manny</summary>
+              <p class="founder-bio">Manny leads business development and strategic direction at Books To Capital, bringing expertise in project management and organizational growth. Based in Winnipeg, he works with owner-managed businesses across Canada to build scalable, capital-ready operations.</p>
+            </details>
             <div class="founder-creds">
               <span class="founder-cred">MBA</span>
               <span class="founder-cred">PMP</span>
@@ -2744,36 +2790,42 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
       <div class="ph-ey" style="display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:12px"><span style="width:32px;height:1px;background:var(--teal);display:block;flex-shrink:0"></span>Our Accounting Team</div>
       <h2 style="font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.75rem);font-weight:400;color:var(--hi);line-height:1.2;margin-bottom:12px;text-wrap:balance">Trained professionals across every discipline your business needs.</h2>
       <p style="font-size:1rem;font-weight:300;color:var(--lo);line-height:1.75;max-width:600px;margin-bottom:56px">We work with a trusted network of credentialed partners so our clients have access to the right expertise at every stage - accounting, legal, and financial advisory under one roof.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <div class="pro-grid">
 
         <!-- CPA Partners -->
-        <div class="reveal" style="background:var(--depth);border:1px solid var(--rim);border-radius:10px;padding:36px 32px">
-          <div style="width:48px;height:48px;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+        <div class="reveal pro-card">
+          <div class="pro-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
-          <div style="font-size:.6875rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:10px">CPA Partners</div>
-          <div style="font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--hi);margin-bottom:14px">Chartered Professional Accountants</div>
-          <p style="font-size:.9rem;font-weight:300;color:var(--lo);line-height:1.72">Our CPA partners bring designation-level rigour to every file - corporate tax returns, financial statement preparation, CRA compliance, and audit-ready reporting. Each engagement is reviewed by a licensed CPA before anything leaves the firm.</p>
+          <div class="pro-label">CPA Partners</div>
+          <details class="pro-details">
+            <summary class="pro-title">Chartered Professional Accountants</summary>
+            <p class="pro-body">Our CPA partners bring designation-level rigour to every file - corporate tax returns, financial statement preparation, CRA compliance, and audit-ready reporting. Each engagement is reviewed by a licensed CPA before anything leaves the firm.</p>
+          </details>
         </div>
 
         <!-- Legal Partners -->
-        <div class="reveal reveal-delay-1" style="background:var(--depth);border:1px solid var(--rim);border-radius:10px;padding:36px 32px">
-          <div style="width:48px;height:48px;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+        <div class="reveal reveal-delay-1 pro-card">
+          <div class="pro-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/></svg>
           </div>
-          <div style="font-size:.6875rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:10px">Legal Partners</div>
-          <div style="font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--hi);margin-bottom:14px">Corporate &amp; Tax Law Specialists</div>
-          <p style="font-size:.9rem;font-weight:300;color:var(--lo);line-height:1.72">Our legal partners handle incorporation, shareholder agreements, business structuring, and tax-driven legal planning. When your accountant and lawyer work together from the start, nothing falls through the cracks between financial and legal decisions.</p>
+          <div class="pro-label">Legal Partners</div>
+          <details class="pro-details">
+            <summary class="pro-title">Corporate &amp; Tax Law Specialists</summary>
+            <p class="pro-body">Our legal partners handle incorporation, shareholder agreements, business structuring, and tax-driven legal planning. When your accountant and lawyer work together from the start, nothing falls through the cracks between financial and legal decisions.</p>
+          </details>
         </div>
 
         <!-- Financial Advisor Partners -->
-        <div class="reveal reveal-delay-2" style="background:var(--depth);border:1px solid var(--rim);border-radius:10px;padding:36px 32px">
-          <div style="width:48px;height:48px;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+        <div class="reveal reveal-delay-2 pro-card">
+          <div class="pro-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <div style="font-size:.6875rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:10px">Financial Advisor Partners</div>
-          <div style="font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--hi);margin-bottom:14px">Wealth &amp; Investment Planning</div>
-          <p style="font-size:.9rem;font-weight:300;color:var(--lo);line-height:1.72">Our financial advisor partners specialize in investment planning, retirement strategy, and wealth structuring for business owners. They work alongside your CPA to ensure your personal and corporate finances move in the same direction - maximizing what you keep after tax.</p>
+          <div class="pro-label">Financial Advisor Partners</div>
+          <details class="pro-details">
+            <summary class="pro-title">Wealth &amp; Investment Planning</summary>
+            <p class="pro-body">Our financial advisor partners specialize in investment planning, retirement strategy, and wealth structuring for business owners. They work alongside your CPA to ensure your personal and corporate finances move in the same direction - maximizing what you keep after tax.</p>
+          </details>
         </div>
 
       </div>
