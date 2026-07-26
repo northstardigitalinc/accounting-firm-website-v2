@@ -617,10 +617,10 @@ svg{display:block}
 }
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
-footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:64px 0 40px}
+footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:36px 0 24px}
 .foot-grid{
   display:grid;grid-template-columns:2fr 1fr 1fr;
-  gap:48px;margin-bottom:56px;
+  gap:36px;margin-bottom:28px;
 }
 .foot-logo{
   font-family:var(--serif);font-size:1.125rem;
@@ -638,7 +638,9 @@ footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:64px 0 40px}
   color:#C59B3B;margin-bottom:20px;
 }
 .foot-links{display:flex;flex-direction:column;gap:11px}
-.foot-pages-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px 20px}
+.foot-pages-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.foot-pages-wrap .foot-hdg{grid-column:1/-1;text-align:center;margin-bottom:14px}
+.foot-pages-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px 20px;grid-column:1/-1}
 .foot-lnk{
   font-size:.9375rem;font-weight:300;
   color:rgba(255,255,255,.6);transition:color .14s;
@@ -1368,15 +1370,15 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="foot-logo">Books To Capital</div>
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
         </div>
-        <div>
+        <div class="foot-pages-wrap">
           <div class="foot-hdg">Pages</div>
           <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
-            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
             <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
             <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
+            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
           </div>
         </div>
         <div>
@@ -1720,15 +1722,15 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="foot-logo">Books To Capital</div>
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
         </div>
-        <div>
+        <div class="foot-pages-wrap">
           <div class="foot-hdg">Pages</div>
           <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
-            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
             <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
             <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
+            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
           </div>
         </div>
         <div>
@@ -2071,15 +2073,15 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="foot-logo">Books To Capital</div>
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses.</p>
         </div>
-        <div>
+        <div class="foot-pages-wrap">
           <div class="foot-hdg">Pages</div>
           <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
-            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
             <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
             <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
+            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
           </div>
         </div>
         <div>
@@ -2583,15 +2585,15 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="foot-logo">Books To Capital</div>
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
         </div>
-        <div>
+        <div class="foot-pages-wrap">
           <div class="foot-hdg">Pages</div>
           <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
-            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
             <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
             <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
+            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
           </div>
         </div>
         <div>
@@ -2772,15 +2774,15 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="foot-logo">Books To Capital</div>
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
         </div>
-        <div>
+        <div class="foot-pages-wrap">
           <div class="foot-hdg">Pages</div>
           <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
-            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
             <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
             <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
+            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
           </div>
         </div>
         <div>
