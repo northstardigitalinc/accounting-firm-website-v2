@@ -858,6 +858,45 @@ footer{border-top:1px solid var(--rim);padding:64px 0 40px}
 .sp-toc-lnk{font-size:13px;font-weight:400;color:var(--lo);padding:7px 16px;border:1px solid var(--rim);border-radius:var(--pill);transition:border-color .14s,color .14s;cursor:pointer}
 .sp-toc-lnk:hover{border-color:var(--teal);color:var(--hi)}
 
+/* ── Sticky service quick-nav ───────────────────────────────── */
+#sp-qnav{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+  z-index:900;
+  display:flex;gap:4px;flex-wrap:nowrap;
+  background:rgba(255,255,255,.96);
+  border:1px solid var(--rim);
+  border-radius:50px;
+  padding:6px 8px;
+  box-shadow:0 4px 24px rgba(5,41,89,.12),0 1px 4px rgba(5,41,89,.08);
+  backdrop-filter:blur(8px);
+  opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s;
+  max-width:calc(100vw - 32px);
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+#sp-qnav::-webkit-scrollbar{display:none}
+#sp-qnav.visible{opacity:1;pointer-events:auto}
+.sp-qn{
+  display:flex;align-items:center;gap:4px;
+  font-size:11px;font-weight:500;
+  color:var(--lo);
+  padding:5px 11px;
+  border-radius:50px;
+  white-space:nowrap;
+  cursor:pointer;
+  transition:background .15s,color .15s;
+  flex-shrink:0;
+}
+.sp-qn:hover{background:var(--depth);color:var(--hi)}
+.sp-qn.active{background:#052959;color:#fff}
+.sp-qn-num{font-size:9px;opacity:.7;font-variant-numeric:tabular-nums}
+@media(max-width:600px){
+  #sp-qnav{bottom:14px;padding:5px 6px;gap:3px}
+  .sp-qn{font-size:10px;padding:4px 9px}
+  .sp-qn-num{display:none}
+}
+
 .sp-service{padding:80px 0;border-bottom:1px solid var(--rim)}
 .sp-service:last-child{border-bottom:none}
 .sp-svc-grid{display:grid;grid-template-columns:280px 1fr;gap:64px}
@@ -2036,6 +2075,18 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 ════════════════════════════════════════════════════════ -->
 <div class="page" id="page-svcs">
 
+  <!-- Sticky quick-nav (visible while scrolling through services) -->
+  <div id="sp-qnav" role="navigation" aria-label="Jump to service">
+    <div class="sp-qn" onclick="spJump('svc-bk')"><span class="sp-qn-num">01</span> Bookkeeping</div>
+    <div class="sp-qn" onclick="spJump('svc-tax')"><span class="sp-qn-num">02</span> Corp. Tax</div>
+    <div class="sp-qn" onclick="spJump('svc-gst')"><span class="sp-qn-num">03</span> GST/HST/PST</div>
+    <div class="sp-qn" onclick="spJump('svc-pay')"><span class="sp-qn-num">04</span> Payroll</div>
+    <div class="sp-qn" onclick="spJump('svc-cap')"><span class="sp-qn-num">05</span> Funding Prep</div>
+    <div class="sp-qn" onclick="spJump('svc-fa')"><span class="sp-qn-num">06</span> Forecasting</div>
+    <div class="sp-qn" onclick="spJump('svc-cfo')"><span class="sp-qn-num">07</span> Fractional CFO</div>
+    <div class="sp-qn" onclick="spJump('svc-adv')"><span class="sp-qn-num">08</span> Consulting</div>
+  </div>
+
   <section class="sp-hero">
     <div class="w">
       <div class="ph-ey">Our Services</div>
@@ -2946,4 +2997,54 @@ function submitContact(e){
     errBox.style.display = 'block';
   });
 }
+
+// ── Services sticky quick-nav ────────────────────────────────
+(function(){
+  var qnav = document.getElementById('sp-qnav');
+  var svcs = ['svc-bk','svc-tax','svc-gst','svc-pay','svc-cap','svc-fa','svc-cfo','svc-adv'];
+  var pills = qnav ? qnav.querySelectorAll('.sp-qn') : [];
+  var active = -1;
+
+  function spShow(on){ if(qnav){ if(on) qnav.classList.add('visible'); else qnav.classList.remove('visible'); } }
+
+  function setActive(idx){
+    if(idx === active) return;
+    active = idx;
+    pills.forEach(function(p,i){ p.classList.toggle('active', i === idx); });
+    // scroll active pill into view within the nav bar
+    if(idx >= 0 && pills[idx]){
+      pills[idx].scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+    }
+  }
+
+  function update(){
+    var svcsPage = document.getElementById('page-svcs');
+    if(!svcsPage || !svcsPage.classList.contains('on')){ spShow(false); return; }
+    var scrollY = window.scrollY;
+    var vh = window.innerHeight;
+    // show nav once user has scrolled 300px into the page
+    spShow(scrollY > 300);
+    // find which section occupies the upper third of the viewport
+    var found = -1;
+    for(var i = svcs.length - 1; i >= 0; i--){
+      var el = document.getElementById(svcs[i]);
+      if(el && el.getBoundingClientRect().top <= vh * 0.4){ found = i; break; }
+    }
+    setActive(found);
+  }
+
+  window.spJump = function(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth'});
+  };
+
+  window.addEventListener('scroll', update, {passive:true});
+  // re-run whenever the page changes (go() switches .on class)
+  var orig = window.go;
+  window.go = function(id, anchor){
+    orig(id, anchor);
+    setTimeout(update, 50);
+  };
+  update();
+})();
 </script>
