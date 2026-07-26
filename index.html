@@ -922,7 +922,9 @@ footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:36px 0 24px}
   flex-shrink:0;
 }
 .sp-qn:hover{background:var(--depth);color:var(--hi)}
-.sp-qn.active{background:#052959;color:#fff}
+.sp-qn.active{color:#fff}
+.sp-qn.acct.active{background:#C59B3B}
+.sp-qn.adv.active{background:#052959}
 .sp-qn-num{font-size:9px;opacity:.7;font-variant-numeric:tabular-nums}
 @media(max-width:600px){
   #sp-qnav{bottom:14px;padding:5px 6px;gap:3px}
@@ -2145,14 +2147,14 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 
   <!-- Sticky quick-nav (visible while scrolling through services) -->
   <div id="sp-qnav" role="navigation" aria-label="Jump to service">
-    <div class="sp-qn" onclick="spJump('svc-bk')"><span class="sp-qn-num">01</span> Bookkeeping</div>
-    <div class="sp-qn" onclick="spJump('svc-tax')"><span class="sp-qn-num">02</span> Corp. Tax</div>
-    <div class="sp-qn" onclick="spJump('svc-gst')"><span class="sp-qn-num">03</span> GST/HST/PST</div>
-    <div class="sp-qn" onclick="spJump('svc-pay')"><span class="sp-qn-num">04</span> Payroll</div>
-    <div class="sp-qn" onclick="spJump('svc-cap')"><span class="sp-qn-num">05</span> Funding Prep</div>
-    <div class="sp-qn" onclick="spJump('svc-fa')"><span class="sp-qn-num">06</span> Forecasting</div>
-    <div class="sp-qn" onclick="spJump('svc-cfo')"><span class="sp-qn-num">07</span> Fractional CFO</div>
-    <div class="sp-qn" onclick="spJump('svc-adv')"><span class="sp-qn-num">08</span> Consulting</div>
+    <div class="sp-qn acct" onclick="spJump('svc-bk')"><span class="sp-qn-num">01</span> Bookkeeping</div>
+    <div class="sp-qn acct" onclick="spJump('svc-tax')"><span class="sp-qn-num">02</span> Corp. Tax</div>
+    <div class="sp-qn acct" onclick="spJump('svc-gst')"><span class="sp-qn-num">03</span> GST/HST/PST</div>
+    <div class="sp-qn acct" onclick="spJump('svc-pay')"><span class="sp-qn-num">04</span> Payroll</div>
+    <div class="sp-qn adv" onclick="spJump('svc-cap')"><span class="sp-qn-num">05</span> Funding Prep</div>
+    <div class="sp-qn adv" onclick="spJump('svc-fa')"><span class="sp-qn-num">06</span> Forecasting</div>
+    <div class="sp-qn adv" onclick="spJump('svc-cfo')"><span class="sp-qn-num">07</span> Fractional CFO</div>
+    <div class="sp-qn adv" onclick="spJump('svc-adv')"><span class="sp-qn-num">08</span> Consulting</div>
   </div>
 
   <section class="sp-hero">
@@ -2405,7 +2407,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
         <div class="sp-aside">
           <div class="sp-svc-num">05</div>
           <div class="sp-svc-name">Funding Preparation</div>
-          <div class="sp-svc-cat">Advisory Services</div>
+          <div class="sp-svc-cat" style="color:#052959;border-color:rgba(5,41,89,.3)">Advisory Services</div>
           <p class="sp-svc-summary">We help businesses determine whether they are financially ready for funding, clean up their records, prepare lender packages, and support the process through to closing.</p>
           <div class="sp-tag-row">
             <span class="sp-tag">Capital Readiness</span>
@@ -2463,7 +2465,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
         <div class="sp-aside">
           <div class="sp-svc-num">06</div>
           <div class="sp-svc-name">Analysis &amp; Forecasting</div>
-          <div class="sp-svc-cat">Advisory Services</div>
+          <div class="sp-svc-cat" style="color:#052959;border-color:rgba(5,41,89,.3)">Advisory Services</div>
           <p class="sp-svc-summary">We turn your financial data into clear, actionable information. Monthly and quarterly reporting, KPI dashboards, revenue and expense analysis, financial forecasts, and scenario planning — so you can make confident decisions.</p>
           <div class="sp-tag-row">
             <span class="sp-tag">Forecasting</span>
@@ -2507,7 +2509,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
         <div class="sp-aside">
           <div class="sp-svc-num">07</div>
           <div class="sp-svc-name">Fractional CFO Services</div>
-          <div class="sp-svc-cat">Advisory Services</div>
+          <div class="sp-svc-cat" style="color:#052959;border-color:rgba(5,41,89,.3)">Advisory Services</div>
           <p class="sp-svc-summary">Senior financial leadership embedded in your business on a part-time basis. We act as your CFO without the full-time salary — managing cash flow, supporting business decisions, and participating in your planning meetings.</p>
           <div class="sp-tag-row">
             <span class="sp-tag">Cash Flow</span>
@@ -2559,7 +2561,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
         <div class="sp-aside">
           <div class="sp-svc-num">08</div>
           <div class="sp-svc-name">Business Consulting</div>
-          <div class="sp-svc-cat">Advisory Services</div>
+          <div class="sp-svc-cat" style="color:#052959;border-color:rgba(5,41,89,.3)">Advisory Services</div>
           <p class="sp-svc-summary">Hourly professional input on business decisions, financial questions, project assessments, and tax matters. Conversational — no deliverables or reports. A clear, direct answer from a CPA who understands your situation.</p>
           <div class="sp-tag-row">
             <span class="sp-tag">Hourly</span>
