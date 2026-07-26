@@ -9,22 +9,22 @@
    Teal: #1282A2  Linen: #E4DFDA  Terracotta: #63372C
 ───────────────────────────────────────────────────────── */
 :root {
-  --canvas:   #010e24;
-  --depth:    #011D4D;
-  --panel:    #021e44;
-  --rim:      #034078;
-  --edge:     #0d5490;
-  --mid-surf: #0a3a6e;
+  --canvas:   #FFFFFF;
+  --depth:    #F4F5F7;
+  --panel:    #EDF0F4;
+  --rim:      #D1D8E4;
+  --edge:     #A8B4C8;
+  --mid-surf: #E0E6EF;
 
-  --hi:    #E4DFDA;
-  --body:  #c0b9b0;
-  --lo:    #9a9088;
-  --dim:   #6e6358;
-  --rust:  #63372C;
+  --hi:    #1F2326;
+  --body:  #3A4148;
+  --lo:    #5E6873;
+  --dim:   #8A939E;
+  --rust:  #C59B3B;
 
-  --teal:  #1282A2;
-  --teal-lo: rgba(18,130,162,.12);
-  --emerald: #b8860b;
+  --teal:  #052959;
+  --teal-lo: rgba(5,41,89,.10);
+  --emerald: #C59B3B;
 
   --serif: "Didot","Bodoni MT","Bodoni 72 Book",Georgia,serif;
   --sans:  ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -61,7 +61,7 @@ svg{display:block}
 .nav{
   position:sticky;top:0;z-index:90;
   border-bottom:1px solid var(--rim);
-  background:rgba(1,14,36,.96);
+  background:rgba(255,255,255,.97);
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
 }
@@ -73,19 +73,20 @@ svg{display:block}
   color:var(--emerald);
   letter-spacing:.03em;
   flex-shrink:0;
-  margin-right:52px;
+  margin-right:28px;
   transition:opacity .2s;
 }
 .logo:hover{opacity:.78}
 .logo-dot{color:var(--emerald)}
 .nav-links{display:flex;gap:0;flex:1}
 .nl{
-  font-size:14px;
+  font-size:13px;
   font-weight:400;
   color:var(--lo);
-  padding:7px 14px;
+  padding:7px 10px;
   border-radius:2px;
   letter-spacing:.01em;
+  white-space:nowrap;
   transition:color .14s;
 }
 .nl:hover,.nl.on{color:var(--hi)}
@@ -133,8 +134,8 @@ svg{display:block}
   content:'';
   position:absolute;inset:0;
   background:
-    linear-gradient(to bottom, rgba(1,14,36,.72) 0%, rgba(1,14,36,.55) 50%, rgba(1,14,36,.88) 100%),
-    radial-gradient(ellipse 70% 60% at 80% 30%,rgba(18,130,162,.08) 0,transparent 100%);
+    linear-gradient(to bottom, rgba(5,41,89,.78) 0%, rgba(5,41,89,.62) 50%, rgba(5,41,89,.88) 100%),
+    radial-gradient(ellipse 70% 60% at 80% 30%,rgba(197,155,59,.08) 0,transparent 100%);
 }
 .hero-content{position:relative}
 .eyebrow{
@@ -197,7 +198,7 @@ svg{display:block}
 .btn-call:hover{opacity:.88;transform:translateY(-1px)}
 .btn-call svg{flex-shrink:0}
 .btn-quote{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--emerald);font-size:.875rem;font-weight:600;letter-spacing:.04em;padding:12px 22px;border-radius:var(--pill);border:1.5px solid var(--emerald);text-decoration:none;transition:background .18s,color .18s,transform .18s cubic-bezier(.22,.9,.36,1),box-shadow .18s;white-space:nowrap}
-.btn-quote:hover{background:var(--emerald);color:var(--canvas);transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,134,11,.22)}
+.btn-quote:hover{background:var(--emerald);color:var(--canvas);transform:translateY(-2px);box-shadow:0 8px 24px rgba(197,155,59,.22)}
 .cta-btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 
 /* Hero stat strip — typography only, no cards */
@@ -289,7 +290,7 @@ svg{display:block}
   padding:32px 0;
   transition:background .15s;
 }
-.svc-trigger:hover{background:rgba(18,130,162,.04);margin:0 -48px;padding:32px 48px}
+.svc-trigger:hover{background:rgba(5,41,89,.04);margin:0 -48px;padding:32px 48px}
 .svc-num{
   font-size:13px;font-weight:400;
   color:var(--teal);
@@ -306,7 +307,7 @@ svg{display:block}
   font-size:10px;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;
   color:var(--teal);
-  border:1px solid rgba(18,130,162,.3);
+  border:1px solid rgba(5,41,89,.2);
   padding:2px 8px;border-radius:var(--pill);
   margin-top:7px;
 }
@@ -345,8 +346,8 @@ svg{display:block}
 .form-accord:hover{border-color:var(--edge)}
 .form-accord.open{border-color:var(--teal)}
 .form-accord-hd{display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:pointer;user-select:none;background:var(--depth)}
-.form-badge{flex-shrink:0;background:rgba(18,130,162,.12);border:1px solid rgba(18,130,162,.3);border-radius:4px;padding:3px 8px;font-size:.7rem;font-weight:700;letter-spacing:.07em;color:var(--teal);white-space:nowrap}
-.form-accord.open .form-badge{background:rgba(18,130,162,.22)}
+.form-badge{flex-shrink:0;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.2);border-radius:4px;padding:3px 8px;font-size:.7rem;font-weight:700;letter-spacing:.07em;color:var(--teal);white-space:nowrap}
+.form-accord.open .form-badge{background:rgba(5,41,89,.14)}
 .form-accord-title{flex:1;font-size:.875rem;font-weight:500;color:var(--hi)}
 .form-accord-sub{font-size:.75rem;color:var(--dim);margin-left:auto;margin-right:12px;white-space:nowrap}
 .form-accord-arr{color:var(--teal);transition:transform .22s cubic-bezier(.22,.9,.36,1);flex-shrink:0}
@@ -541,7 +542,7 @@ svg{display:block}
   border-bottom:1px solid var(--rim);
   transition:background .15s;
 }
-.offer-row:hover{background:rgba(18,130,162,.04);margin:0 -48px;padding:36px 48px}
+.offer-row:hover{background:rgba(5,41,89,.04);margin:0 -48px;padding:36px 48px}
 .offer-num{
   font-size:13px;font-weight:400;
   color:var(--teal);font-family:var(--serif);
@@ -557,7 +558,7 @@ svg{display:block}
   font-size:10px;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;
   color:var(--teal);
-  border:1px solid rgba(18,130,162,.3);
+  border:1px solid rgba(5,41,89,.2);
   padding:2px 8px;border-radius:var(--pill);
 }
 .offer-desc{
@@ -712,7 +713,7 @@ footer{border-top:1px solid var(--rim);padding:64px 0 40px}
     gap:0 14px;padding:22px 0;
   }
   .svc-trigger:hover{
-    background:rgba(18,130,162,.04);
+    background:rgba(5,41,89,.04);
     margin:0 -20px;padding:22px 20px;
   }
   .svc-name{font-size:1.0625rem}
@@ -769,7 +770,7 @@ footer{border-top:1px solid var(--rim);padding:64px 0 40px}
     cursor:pointer;
   }
   .offer-row:hover{
-    background:rgba(18,130,162,.04);
+    background:rgba(5,41,89,.04);
     margin:0 -20px;padding:24px 20px;
   }
   .offer-desc{
@@ -861,7 +862,7 @@ footer{border-top:1px solid var(--rim);padding:64px 0 40px}
 .sp-aside{position:relative}
 .sp-svc-num{font-family:var(--serif);font-size:.8125rem;color:var(--teal);font-variant-numeric:tabular-nums;letter-spacing:.06em;margin-bottom:16px}
 .sp-svc-name{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.25rem);font-weight:400;color:var(--hi);line-height:1.15;margin-bottom:12px}
-.sp-svc-cat{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(18,130,162,.3);padding:3px 10px;border-radius:var(--pill);margin-bottom:24px}
+.sp-svc-cat{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(5,41,89,.2);padding:3px 10px;border-radius:var(--pill);margin-bottom:24px}
 .sp-svc-summary{font-size:.9375rem;font-weight:300;color:var(--lo);line-height:1.78;margin-bottom:28px}
 .sp-tag-row{display:flex;flex-wrap:wrap;gap:6px}
 .sp-tag{font-size:11px;font-weight:500;color:var(--dim);background:var(--panel);padding:4px 10px;border-radius:2px}
@@ -995,8 +996,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 }
 
 /* ── Text selection ── */
-::selection{background:rgba(18,130,162,.35);color:var(--hi)}
-::-moz-selection{background:rgba(18,130,162,.35);color:var(--hi)}
+::selection{background:rgba(5,41,89,.2);color:var(--hi)}
+::-moz-selection{background:rgba(5,41,89,.2);color:var(--hi)}
 
 /* ── Scroll reveal ── */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .62s cubic-bezier(.22,.9,.36,1),transform .62s cubic-bezier(.22,.9,.36,1)}
@@ -1022,7 +1023,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 
 /* ── Button hover lift ── */
 .btn-primary,.btn-call,.nav-cta{transition:transform .18s cubic-bezier(.22,.9,.36,1),opacity .18s,box-shadow .18s}
-.btn-primary:hover,.btn-call:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(18,130,162,.28)}
+.btn-primary:hover,.btn-call:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(5,41,89,.25)}
 .btn-outline{transition:transform .18s cubic-bezier(.22,.9,.36,1),border-color .18s,color .18s}
 .btn-outline:hover{transform:translateY(-2px)}
 
@@ -1054,11 +1055,11 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
       <a class="logo" href="#" onclick="go('home');return false">Company<span class="logo-dot">.</span>Name</a>
       <div class="nav-links">
         <a class="nl on" id="nl-home" href="#" onclick="go('home');return false">Home</a>
-        <a class="nl" id="nl-svcs" href="#" onclick="go('svcs');return false">Services</a>
+        <a class="nl" id="nl-svcs" href="#" onclick="go('svcs');return false">Our Services</a>
+        <a class="nl" id="nl-cap" href="#" onclick="go('cap');return false">Capital Access (Funding)</a>
         <a class="nl" id="nl-lend" href="#" onclick="go('lend');return false">For Lenders</a>
-        <a class="nl" id="nl-hlth" href="#" onclick="go('hlth');return false">For Healthcare</a>
-        <a class="nl" id="nl-about" href="#" onclick="go('about');return false">About</a>
-        <a class="nl" id="nl-contact" href="#" onclick="go('contact');return false">Contact</a>
+        <a class="nl" id="nl-about" href="#" onclick="go('about');return false">About Us</a>
+        <a class="nl" id="nl-contact" href="#" onclick="go('contact');return false">Contact Us</a>
       </div>
       <div class="nav-right">
         <a class="nav-portal" href="https://client.qbo.intuit.com" target="_blank" rel="noopener" title="Client Login">
@@ -1074,11 +1075,11 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
   </div>
   <div class="mob-menu" id="mobMenu">
     <a class="mob-lnk" href="#" onclick="go('home');closeMob();return false">Home</a>
-    <a class="mob-lnk" href="#" onclick="go('svcs');closeMob();return false">Services</a>
+    <a class="mob-lnk" href="#" onclick="go('svcs');closeMob();return false">Our Services</a>
+    <a class="mob-lnk" href="#" onclick="go('cap');closeMob();return false">Capital Access (Funding)</a>
     <a class="mob-lnk" href="#" onclick="go('lend');closeMob();return false">For Lenders</a>
-    <a class="mob-lnk" href="#" onclick="go('hlth');closeMob();return false">For Healthcare</a>
-    <a class="mob-lnk" href="#" onclick="go('about');closeMob();return false">About</a>
-    <a class="mob-lnk" href="#" onclick="go('contact');closeMob();return false">Contact</a>
+    <a class="mob-lnk" href="#" onclick="go('about');closeMob();return false">About Us</a>
+    <a class="mob-lnk" href="#" onclick="go('contact');closeMob();return false">Contact Us</a>
     <a class="mob-lnk" href="https://client.qbo.intuit.com" target="_blank" rel="noopener">Client Login</a>
     <div class="mob-cta-wrap">
       <a class="nav-cta" href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener" style="display:inline-block">Schedule a Free Call</a>
@@ -1443,21 +1444,21 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
         <div>
           <div class="proof-rows">
             <div class="pr-row">
-              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <div>
                 <p class="pr-t">Organized before the first meeting</p>
                 <p class="pr-d">We review financial readiness and identify gaps before any lender introduction — so your time isn't spent on preventable back-and-forth.</p>
               </div>
             </div>
             <div class="pr-row">
-              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <div>
                 <p class="pr-t">CRA good standing confirmed</p>
                 <p class="pr-d">We review CRA standing, outstanding balances, and HST accounts so there are no surprises during due diligence.</p>
               </div>
             </div>
             <div class="pr-row">
-              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <div>
                 <p class="pr-t">Honest numbers, clearly presented</p>
                 <p class="pr-d">We do not inflate projections or window-dress financials. Accurate, well-organized information builds lender confidence and speeds up approvals.</p>
@@ -1641,11 +1642,11 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="foot-hdg">Pages</div>
           <div class="foot-links">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
-            <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
-            <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
+            <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
+            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
             <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
-            <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
-            <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
+            <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+            <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
           </div>
         </div>
         <div>
@@ -1667,17 +1668,17 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 </div><!-- /lenders -->
 
 <!-- ════════════════════════════════════════════════════════
-     HEALTHCARE PAGE
+     CAPITAL ACCESS PAGE
 ════════════════════════════════════════════════════════ -->
-<div class="page" id="page-hlth">
+<div class="page" id="page-cap">
 
   <div class="ph">
     <div class="w">
-      <div class="ph-ey">For Healthcare Practices</div>
-      <h1 class="ph-h">Is Your Healthcare Practice Ready to Get More Funding?</h1>
-      <p class="ph-sub">We help healthcare practices organize their books, improve financial reporting, prepare forecasts, and build stronger funding packages — for refinancing, expansion, acquisitions, equipment, or working capital.</p>
+      <div class="ph-ey">Capital Access &amp; Funding Preparation</div>
+      <h1 class="ph-h">Get Your Business Financially Ready to Raise Capital</h1>
+      <p class="ph-sub">We prepare Canadian businesses for lender and investor conversations — cleaning up books, building financial models, preparing forecasts, and assembling the complete financial package that gets deals done.</p>
       <div class="hero-btns reveal reveal-delay-3">
-        <a class="btn-primary" href="#hlth-form" onclick="document.getElementById('hlth-form').scrollIntoView({behavior:'smooth'});return false">Check Your Practice Eligibility</a>
+        <a class="btn-primary" href="#cap-form" onclick="document.getElementById('cap-form').scrollIntoView({behavior:'smooth'});return false">Start Your Readiness Review</a>
         <a class="btn-outline" href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener">Schedule a Discovery Call</a>
       </div>
     </div>
@@ -1685,24 +1686,24 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 
   <div class="stat-strip">
     <div class="ss-cell">
-      <div class="ss-cat">24-Hour Review</div>
+      <div class="ss-cat">Readiness Review</div>
       <div class="ss-n" style="color:var(--emerald)">Free</div>
-      <div class="ss-d">Preliminary capital-readiness review to identify gaps and next steps</div>
+      <div class="ss-d">Preliminary capital-readiness review delivered within 24 hours — no financial documents required</div>
     </div>
     <div class="ss-cell">
-      <div class="ss-cat">Practices Supported</div>
-      <div class="ss-n">50+</div>
-      <div class="ss-d">Healthcare practices across Ontario helped with financial cleanup and reporting</div>
+      <div class="ss-cat">Typical Timeline</div>
+      <div class="ss-n">4–10 wks</div>
+      <div class="ss-d">From disorganized books to a complete, lender-ready financial package</div>
     </div>
     <div class="ss-cell">
-      <div class="ss-cat">Typical Cleanup</div>
-      <div class="ss-n">4–8 wks</div>
-      <div class="ss-d">From disorganized books to lender-ready financials</div>
+      <div class="ss-cat">Funding Types</div>
+      <div class="ss-n">All</div>
+      <div class="ss-d">Bank loans, BDC, credit unions, private lenders, investors, and government programs</div>
     </div>
     <div class="ss-cell">
       <div class="ss-cat">Focus</div>
       <div class="ss-n">Canada</div>
-      <div class="ss-d">Canadian healthcare practices — CRA tax compliance, HST, PIPEDA privacy standards</div>
+      <div class="ss-d">Canadian businesses — CRA compliance, HST/GST, OSFI-regulated lenders, provincial programs</div>
     </div>
   </div>
 
@@ -1710,71 +1711,71 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     <div class="w">
       <div class="sec-header">
         <div>
-          <div class="sec-eyebrow">What We Do</div>
-          <h2 class="sec-h reveal">Financial cleanup and reporting built for healthcare.</h2>
+          <div class="sec-eyebrow">How We Prepare You</div>
+          <h2 class="sec-h reveal">A structured path from messy books to a funded deal.</h2>
         </div>
-        <p class="sec-p reveal reveal-delay-1">Healthcare practice owners are focused on patient care. We handle the financial side — cleaning up records, improving reporting, analysing cash flow, and preparing the financial package needed when you're ready to grow.</p>
+        <p class="sec-p reveal reveal-delay-1">Most businesses are turned down not because the business isn't viable — but because the financial picture isn't clear. We fix that. From initial cleanup through final presentation, we build the financial package a lender or investor actually needs to say yes.</p>
       </div>
       <div class="offer-list">
         <div class="offer-row">
           <div class="offer-num">01</div>
           <div>
-            <div class="offer-name">Financial Cleanup &amp; Bookkeeping</div>
+            <div class="offer-name">Financial Cleanup &amp; Bookkeeping Catch-Up</div>
             <div class="offer-tag">Bookkeeping</div>
           </div>
-          <div class="offer-desc">Catch-up and cleanup of practice bookkeeping, reconciliation of bank and credit accounts, organization of income and expense records, and preparation of clean financial statements.</div>
+          <div class="offer-desc">Reconciliation of bank and credit accounts, catch-up of outstanding bookkeeping, correction of misclassified transactions, and production of clean, accurate financial statements ready for lender review.</div>
         </div>
         <div class="offer-row">
           <div class="offer-num">02</div>
           <div>
-            <div class="offer-name">Tax Readiness &amp; CRA Compliance</div>
+            <div class="offer-name">Tax Compliance &amp; CRA Clearance</div>
             <div class="offer-tag">Tax</div>
           </div>
-          <div class="offer-desc">T1 and T2 preparation for practice owners and their corporations, review of HST/GST standing, CRA correspondence support, and resolution of any outstanding filings or balances.</div>
+          <div class="offer-desc">T1 and T2 filing and catch-up for business owners and their corporations, HST/GST standing review and filing, resolution of CRA correspondence, and clearance of outstanding balances that would block a lender's due diligence.</div>
         </div>
         <div class="offer-row">
           <div class="offer-num">03</div>
           <div>
-            <div class="offer-name">Cash-Flow Analysis</div>
+            <div class="offer-name">Cash-Flow Analysis &amp; Debt Serviceability</div>
             <div class="offer-tag">Cash Flow</div>
           </div>
-          <div class="offer-desc">A clear picture of how cash moves through your practice — monthly inflows, fixed and variable expenses, seasonal patterns, and your actual ability to carry additional financing.</div>
+          <div class="offer-desc">A structured review of how cash flows through the business — inflows, fixed and variable costs, seasonal patterns, existing debt obligations, and a clear calculation of what additional financing the business can actually carry.</div>
         </div>
         <div class="offer-row">
           <div class="offer-num">04</div>
           <div>
-            <div class="offer-name">Financial Forecasting</div>
+            <div class="offer-name">Financial Forecasting &amp; Projections</div>
             <div class="offer-tag">Forecasting</div>
           </div>
-          <div class="offer-desc">Realistic 12–24 month financial projections for your practice, with clearly documented assumptions and revenue drivers — ready for review by lenders, partners, or investors.</div>
+          <div class="offer-desc">Realistic 12–36 month financial projections with clearly documented assumptions and revenue drivers — built to stand up to lender scrutiny and support the business case for the amount being requested.</div>
         </div>
         <div class="offer-row">
           <div class="offer-num">05</div>
           <div>
-            <div class="offer-name">Management Reporting</div>
-            <div class="offer-tag">Reporting</div>
+            <div class="offer-name">Use of Funds &amp; Funding Narrative</div>
+            <div class="offer-tag">Deal Structuring</div>
           </div>
-          <div class="offer-desc">Monthly and quarterly financial reports that make your practice's performance visible — revenue trends, overhead ratios, profitability by service line, and KPI dashboards.</div>
+          <div class="offer-desc">A clear, credible use-of-funds breakdown tied to the business's financial plan — showing exactly how the requested capital will be deployed, what it will produce, and how it will be repaid or returned.</div>
         </div>
         <div class="offer-row">
           <div class="offer-num">06</div>
           <div>
-            <div class="offer-name">Funding &amp; Refinancing Preparation</div>
+            <div class="offer-name">Complete Financial Package Assembly</div>
             <div class="offer-tag">Capital Readiness</div>
           </div>
-          <div class="offer-desc">A complete financial package for your lender — historical financials, cash-flow analysis, forecasts, use of funds, and existing debt summary — built to support your funding application.</div>
+          <div class="offer-desc">Assembly of the full financial package: historical financials, cash-flow analysis, projections, use-of-funds statement, existing debt schedule, and any supporting documentation a lender or investor will request during due diligence.</div>
         </div>
       </div>
 
       <div style="margin-top:56px;background:var(--panel);border:1px solid var(--rim);border-left:3px solid var(--teal);border-radius:6px;padding:28px 32px">
-        <div class="sec-eyebrow" style="margin-bottom:12px">Practices We Work With</div>
+        <div class="sec-eyebrow" style="margin-bottom:12px">Businesses We Work With</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 24px">
-          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Physiotherapy clinics</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Chiropractic clinics</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Rehabilitation clinics</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Dental practices</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Optometry clinics</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Multidisciplinary clinics</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Owner-operated SMEs</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Professional services firms</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Healthcare &amp; wellness practices</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Retail &amp; hospitality operators</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Construction &amp; trades businesses</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:.9375rem;font-weight:300;color:var(--lo)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Franchisees &amp; multi-location operators</div>
         </div>
       </div>
     </div>
@@ -1784,38 +1785,38 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     <div class="w">
       <div class="ed-grid">
         <div>
-          <div class="sec-eyebrow" style="margin-bottom:28px">The 24-Hour Preliminary Review</div>
-          <p class="ed-pull">"Before any lender conversation, you need to know exactly where your practice stands financially — not after the application is submitted."</p>
-          <p class="ed-body">Our free preliminary capital-readiness review gives practice owners a clear picture of what's organized, what's missing, and what financial issues may need attention before approaching a lender.<br><br>The review identifies what appears to be in order, what information is incomplete or missing, what financial issues may need to be resolved, and whether additional cleanup or analysis is likely required before a lender conversation is productive.<br><br>We complete the preliminary review within 24 hours of receiving your eligibility form.</p>
+          <div class="sec-eyebrow" style="margin-bottom:28px">The 24-Hour Readiness Review</div>
+          <p class="ed-pull">"Most businesses don't know what a lender actually needs — until the application is declined. We make sure you know before the conversation starts."</p>
+          <p class="ed-body">Our free preliminary capital-readiness review gives business owners an honest picture of where they stand — what's in order, what's missing, and what needs to be resolved before approaching a lender or investor.<br><br>The review identifies what financial records appear clean and ready, where gaps or inconsistencies exist, what CRA or compliance issues may need attention, and whether additional cleanup or preparation is likely required before a lender conversation will be productive.<br><br>No financial documents are required at this stage. We complete the review within 24 hours of your intake form.</p>
         </div>
         <div>
           <div class="proof-rows">
             <div class="pr-row">
-              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <div>
-                <p class="pr-t">What appears organized</p>
-                <p class="pr-d">We identify which financial records are clean, current, and ready to present.</p>
+                <p class="pr-t">What's organized and ready</p>
+                <p class="pr-d">We identify which financial records are clean, current, and presentable to a lender or investor.</p>
               </div>
             </div>
             <div class="pr-row">
-              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <div>
-                <p class="pr-t">What information is missing</p>
-                <p class="pr-d">We flag gaps in financial records, tax filings, or documentation that a lender will expect to see.</p>
+                <p class="pr-t">What's missing or incomplete</p>
+                <p class="pr-d">We flag gaps in financial records, tax filings, or documentation that a lender will require before proceeding.</p>
               </div>
             </div>
             <div class="pr-row">
-              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <div>
-                <p class="pr-t">What needs attention first</p>
-                <p class="pr-d">We identify financial issues — outstanding CRA balances, disorganized books, missing statements — and prioritize what to resolve before approaching a lender.</p>
+                <p class="pr-t">What needs to be resolved first</p>
+                <p class="pr-d">Outstanding CRA balances, disorganized books, or missing statements — identified and prioritized before you approach a lender.</p>
               </div>
             </div>
             <div class="pr-row">
-              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#1282A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="pr-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3" stroke="#052959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <div>
-                <p class="pr-t">Whether you're ready to proceed</p>
-                <p class="pr-d">An honest assessment of whether your practice can support a lender conversation now, or whether preparation work is needed first.</p>
+                <p class="pr-t">An honest readiness assessment</p>
+                <p class="pr-d">A clear answer on whether your business is ready for a funding conversation now, or what preparation work comes first.</p>
               </div>
             </div>
           </div>
@@ -1824,21 +1825,21 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     </div>
   </section>
 
-  <!-- Healthcare Eligibility Form -->
-  <section id="hlth-form" style="padding:72px 0;background:var(--depth);border-top:1px solid var(--rim);border-bottom:1px solid var(--rim)">
+  <!-- Capital Access Intake Form -->
+  <section id="cap-form" style="padding:72px 0;background:var(--depth);border-top:1px solid var(--rim);border-bottom:1px solid var(--rim)">
     <div class="w" style="max-width:760px">
-      <div class="sec-eyebrow" style="margin-bottom:12px">24-Hour Preliminary Review</div>
-      <h2 style="font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.75rem);font-weight:400;color:var(--hi);margin-bottom:10px;text-wrap:balance">Check Your Practice Eligibility</h2>
+      <div class="sec-eyebrow" style="margin-bottom:12px">24-Hour Readiness Review</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.75rem);font-weight:400;color:var(--hi);margin-bottom:10px;text-wrap:balance">Start Your Capital Readiness Review</h2>
       <p style="font-size:1rem;font-weight:300;color:var(--lo);line-height:1.72;margin-bottom:36px">Submit the form below and we will complete your preliminary capital-readiness review within 24 hours. No sensitive financial documents are required at this stage.</p>
       <form onsubmit="return false" style="display:flex;flex-direction:column;gap:20px">
         <div class="cf-row">
           <div class="cf-field">
-            <label class="cf-lbl">Practice Owner / Contact Name</label>
+            <label class="cf-lbl">Business Owner / Contact Name</label>
             <input class="cf-inp" type="text" placeholder="Full name">
           </div>
           <div class="cf-field">
-            <label class="cf-lbl">Clinic or Practice Name</label>
-            <input class="cf-inp" type="text" placeholder="Practice name">
+            <label class="cf-lbl">Business Name</label>
+            <input class="cf-inp" type="text" placeholder="Legal or operating name">
           </div>
         </div>
         <div class="cf-row">
@@ -1863,13 +1864,14 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
             </select>
           </div>
           <div class="cf-field">
-            <label class="cf-lbl">Type of Practice</label>
+            <label class="cf-lbl">Industry / Type of Business</label>
             <select class="cf-inp">
               <option value="">Select type</option>
-              <option>Physiotherapy clinic</option><option>Chiropractic clinic</option>
-              <option>Rehabilitation clinic</option><option>Dental practice</option>
-              <option>Optometry clinic</option><option>Medical / Physician practice</option>
-              <option>Multidisciplinary healthcare clinic</option><option>Other healthcare</option>
+              <option>Professional services</option><option>Healthcare / wellness</option>
+              <option>Retail</option><option>Hospitality / food service</option>
+              <option>Construction / trades</option><option>Manufacturing</option>
+              <option>Technology</option><option>Franchise</option>
+              <option>Real estate / property</option><option>Other</option>
             </select>
           </div>
         </div>
@@ -1906,10 +1908,11 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
             <label class="cf-lbl">Purpose of Funding</label>
             <select class="cf-inp">
               <option value="">Select purpose</option>
-              <option>Refinancing existing debt</option><option>Working capital</option>
-              <option>Equipment purchase</option><option>Clinic renovations</option>
-              <option>Opening another location</option><option>Acquiring another practice</option>
-              <option>Purchasing commercial property</option><option>Other</option>
+              <option>Working capital</option><option>Equipment purchase</option>
+              <option>Business expansion / new location</option><option>Acquisition of a business</option>
+              <option>Refinancing existing debt</option><option>Real estate / commercial property</option>
+              <option>Renovation / leasehold improvements</option><option>Inventory or contract financing</option>
+              <option>Other</option>
             </select>
           </div>
         </div>
@@ -1925,7 +1928,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
             </select>
           </div>
           <div class="cf-field">
-            <label class="cf-lbl">Is practice bookkeeping reasonably up to date?</label>
+            <label class="cf-lbl">Is business bookkeeping reasonably up to date?</label>
             <select class="cf-inp">
               <option value="">Select</option>
               <option>Yes, current within 90 days</option>
@@ -1945,8 +1948,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
             <option>Any time</option>
           </select>
         </div>
-        <p style="font-size:.8125rem;font-weight:300;color:var(--dim);line-height:1.6;margin-top:4px">We do not request patient information, SINs, tax returns, bank statements, or other sensitive documents through this form. No identifiable patient or health information should be submitted here. Sensitive documents are collected through our secure client portal after an engagement is confirmed.</p>
-        <button type="submit" class="btn-primary" style="align-self:flex-start;margin-top:8px">Submit for Preliminary Review</button>
+        <p style="font-size:.8125rem;font-weight:300;color:var(--dim);line-height:1.6;margin-top:4px">We do not request tax returns, bank statements, financial statements, or other sensitive documents through this form. Sensitive documents are collected through our secure client portal after an engagement is confirmed.</p>
+        <button type="submit" class="btn-primary" style="align-self:flex-start;margin-top:8px">Submit for Readiness Review</button>
       </form>
     </div>
   </section>
@@ -1955,8 +1958,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     <div class="w">
       <div class="cta-grid">
         <div>
-          <h2 class="cta-h">Let's talk about your practice.</h2>
-          <p class="cta-sub">30 minutes to walk through where your practice stands financially and what it would take to get lender-ready. No commitment required.</p>
+          <h2 class="cta-h">Let's talk about your funding goals.</h2>
+          <p class="cta-sub">30 minutes to assess where your business stands financially and what it would take to get lender-ready. No commitment required.</p>
         </div>
         <div class="cta-btns">
           <a class="btn-call" href="tel:+16473393039"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.64a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call Now</a>
@@ -1971,7 +1974,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
       <div class="foot-grid">
         <div>
           <div class="foot-logo">Company<span>.</span>Name</div>
-          <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
+          <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses.</p>
         </div>
         <div>
           <div class="foot-hdg">Services</div>
@@ -1990,11 +1993,11 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="foot-hdg">Pages</div>
           <div class="foot-links">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
-            <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
-            <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
+            <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
+            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
             <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
-            <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
-            <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
+            <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+            <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
           </div>
         </div>
         <div>
@@ -2013,7 +2016,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     </div>
   </footer>
 
-</div><!-- /healthcare -->
+</div><!-- /capital-access -->
 
 <!-- ════════════════════════════════════════════════════════
      SERVICES PAGE
@@ -2530,19 +2533,19 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="ph-ey" style="display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:28px"><span style="width:32px;height:1px;background:var(--teal);display:block;flex-shrink:0"></span>How We Work</div>
           <div style="display:flex;flex-direction:column;gap:20px">
             <div style="display:flex;gap:16px;align-items:flex-start">
-              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(18,130,162,.1);border:1px solid rgba(18,130,162,.25);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.9rem;color:var(--teal)">01</div>
+              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.18);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.9rem;color:var(--teal)">01</div>
               <div><div style="font-size:.9375rem;font-weight:600;color:var(--hi);margin-bottom:4px">Discovery Call</div><div style="font-size:.875rem;font-weight:300;color:var(--lo);line-height:1.65">We learn your business, your goals, and the specific problems you need solved. No obligation.</div></div>
             </div>
             <div style="display:flex;gap:16px;align-items:flex-start">
-              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(18,130,162,.1);border:1px solid rgba(18,130,162,.25);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.9rem;color:var(--teal)">02</div>
+              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.18);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.9rem;color:var(--teal)">02</div>
               <div><div style="font-size:.9375rem;font-weight:600;color:var(--hi);margin-bottom:4px">Engagement Letter</div><div style="font-size:.875rem;font-weight:300;color:var(--lo);line-height:1.65">Scope, deliverables, fees, and timelines — all in writing before any work begins.</div></div>
             </div>
             <div style="display:flex;gap:16px;align-items:flex-start">
-              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(18,130,162,.1);border:1px solid rgba(18,130,162,.25);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.9rem;color:var(--teal)">03</div>
+              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.18);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.9rem;color:var(--teal)">03</div>
               <div><div style="font-size:.9375rem;font-weight:600;color:var(--hi);margin-bottom:4px">Onboarding</div><div style="font-size:.875rem;font-weight:300;color:var(--lo);line-height:1.65">We collect CRA authorizations, access existing records, and set up your reporting cadence.</div></div>
             </div>
             <div style="display:flex;gap:16px;align-items:flex-start">
-              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(18,130,162,.1);border:1px solid rgba(18,130,162,.25);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.9rem;color:var(--teal)">04</div>
+              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.18);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.9rem;color:var(--teal)">04</div>
               <div><div style="font-size:.9375rem;font-weight:600;color:var(--hi);margin-bottom:4px">Ongoing Engagement</div><div style="font-size:.875rem;font-weight:300;color:var(--lo);line-height:1.65">Monthly reporting, proactive tax planning, and direct access to your CPA — no waiting rooms.</div></div>
             </div>
           </div>
@@ -2609,11 +2612,11 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="foot-hdg">Pages</div>
           <div class="foot-links">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
-            <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
-            <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
+            <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
+            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
             <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
-            <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
-            <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
+            <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+            <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
           </div>
         </div>
         <div>
@@ -2732,7 +2735,7 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
         </button>
       </div>
 
-      <div id="cf-success" style="display:none;background:rgba(18,130,162,.1);border:1px solid rgba(18,130,162,.35);border-radius:8px;padding:24px 28px">
+      <div id="cf-success" style="display:none;background:rgba(5,41,89,.08);border:1px solid rgba(5,41,89,.2);border-radius:8px;padding:24px 28px">
         <p style="font-family:var(--serif);font-size:1.375rem;color:var(--hi);margin-bottom:8px">Thank you — we'll be in touch.</p>
         <p style="font-size:.9375rem;color:var(--body);line-height:1.6">Your inquiry has been received. Expect a response within one business day. In the meantime, feel free to <a href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none">schedule a free call</a> directly.</p>
       </div>
@@ -2751,11 +2754,11 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
       <div>
         <div class="foot-head">Pages</div>
         <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
-        <a class="foot-lnk" href="#" onclick="go('svcs');return false">Services</a>
-        <a class="foot-lnk" href="#" onclick="go('about');return false">About</a>
+        <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
+        <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
         <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
-        <a class="foot-lnk" href="#" onclick="go('hlth');return false">For Healthcare</a>
-        <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact</a>
+        <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+        <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
       </div>
       <div>
         <div class="foot-head">Services</div>
