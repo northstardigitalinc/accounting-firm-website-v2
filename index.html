@@ -279,6 +279,7 @@ svg{display:block}
   align-self:end;
 }
 .svc-list{border-top:1px solid var(--rim)}
+.svc-group-label{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#052959;padding:20px 0 4px;border-bottom:1px solid var(--rim);margin-bottom:0;opacity:.7}
 .svc-row{
   border-bottom:1px solid var(--rim);
   cursor:pointer;
@@ -1154,12 +1155,15 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
       </div>
       <div class="svc-list">
 
+        <!-- ── Accounting Services ── -->
+        <div class="svc-group-label">Accounting Services</div>
+
         <div class="svc-row" onclick="toggleSvc(this)">
           <div class="svc-trigger">
             <div class="svc-num">01</div>
             <div>
-              <div class="svc-name">Bookkeeping</div>
-              <div class="svc-cat">Foundation</div>
+              <div class="svc-name">Bookkeeping &amp; Catch-Up</div>
+              <div class="svc-cat">Accounting Services</div>
             </div>
             <div class="svc-arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
@@ -1178,8 +1182,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="svc-trigger">
             <div class="svc-num">02</div>
             <div>
-              <div class="svc-name">Tax Preparation</div>
-              <div class="svc-cat">Tax</div>
+              <div class="svc-name">Corporate &amp; Personal Tax</div>
+              <div class="svc-cat">Accounting Services</div>
             </div>
             <div class="svc-arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
@@ -1198,28 +1202,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="svc-trigger">
             <div class="svc-num">03</div>
             <div>
-              <div class="svc-name">Payroll &amp; Contractor Services</div>
-              <div class="svc-cat">Payroll</div>
-            </div>
-            <div class="svc-arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          </div>
-          <div class="svc-drop">
-            <p class="svc-drop-text">Full payroll processing and contractor management — from remittances and T4 preparation to contractor invoice tracking and T4A filing, handled accurately and on time.</p>
-            <ul class="svc-drop-bullets">
-              <li>Payroll processing and remittances</li>
-              <li>T4 and T4 Summary preparation</li>
-              <li>Contractor invoice and payment tracking</li>
-              <li>T4A preparation</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="svc-row" onclick="toggleSvc(this)">
-          <div class="svc-trigger">
-            <div class="svc-num">04</div>
-            <div>
-              <div class="svc-name">GST/HST/PST Services</div>
-              <div class="svc-cat">Tax Compliance</div>
+              <div class="svc-name">GST / HST / PST Filing</div>
+              <div class="svc-cat">Accounting Services</div>
             </div>
             <div class="svc-arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
@@ -1236,20 +1220,43 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 
         <div class="svc-row" onclick="toggleSvc(this)">
           <div class="svc-trigger">
-            <div class="svc-num">05</div>
+            <div class="svc-num">04</div>
             <div>
-              <div class="svc-name">Fractional CFO Services</div>
-              <div class="svc-cat">Flagship</div>
+              <div class="svc-name">Payroll / T4 &amp; T4A</div>
+              <div class="svc-cat">Accounting Services</div>
             </div>
             <div class="svc-arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
           <div class="svc-drop">
-            <p class="svc-drop-text">Senior financial leadership embedded in your team, without the full-time cost. We manage cash flow, support business decisions, and sit alongside you in planning meetings.</p>
+            <p class="svc-drop-text">Full payroll processing and contractor management — from remittances and T4 preparation to contractor invoice tracking and T4A filing, handled accurately and on time.</p>
             <ul class="svc-drop-bullets">
-              <li>Cash-flow management and budgeting</li>
-              <li>Profitability analysis and cost-control planning</li>
-              <li>Management meetings and business decision support</li>
-              <li>Growth planning and scenario analysis</li>
+              <li>Payroll processing and remittances</li>
+              <li>T4 and T4 Summary preparation</li>
+              <li>Contractor invoice and payment tracking</li>
+              <li>T4A preparation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Advisory Services ── -->
+        <div class="svc-group-label">Advisory Services</div>
+
+        <div class="svc-row" onclick="toggleSvc(this)">
+          <div class="svc-trigger">
+            <div class="svc-num">05</div>
+            <div>
+              <div class="svc-name">Funding Preparation</div>
+              <div class="svc-cat">Advisory Services</div>
+            </div>
+            <div class="svc-arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="svc-drop">
+            <p class="svc-drop-text">We help businesses get lender-ready — reviewing financial readiness, cleaning up records, preparing forecasts and lender packages, and supporting the process through to closing.</p>
+            <ul class="svc-drop-bullets">
+              <li>Financial readiness review and records cleanup</li>
+              <li>Forecasts and lender presentations</li>
+              <li>Use of funds documentation and lender coordination</li>
+              <li>Support through funding and closing</li>
             </ul>
           </div>
         </div>
@@ -1258,8 +1265,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="svc-trigger">
             <div class="svc-num">06</div>
             <div>
-              <div class="svc-name">Financial Analysis</div>
-              <div class="svc-cat">Planning</div>
+              <div class="svc-name">Analysis &amp; Forecasting</div>
+              <div class="svc-cat">Advisory Services</div>
             </div>
             <div class="svc-arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
@@ -1278,18 +1285,18 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="svc-trigger">
             <div class="svc-num">07</div>
             <div>
-              <div class="svc-name">Capital Access Preparation &amp; Deal Support</div>
-              <div class="svc-cat">Capital Readiness</div>
+              <div class="svc-name">Fractional CFO Services</div>
+              <div class="svc-cat">Advisory Services</div>
             </div>
             <div class="svc-arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
           <div class="svc-drop">
-            <p class="svc-drop-text">We help businesses get lender-ready — reviewing financial readiness, cleaning up records, preparing forecasts and lender packages, and supporting the process through to closing.</p>
+            <p class="svc-drop-text">Senior financial leadership embedded in your team, without the full-time cost. We manage cash flow, support business decisions, and sit alongside you in planning meetings.</p>
             <ul class="svc-drop-bullets">
-              <li>Financial readiness review and records cleanup</li>
-              <li>Forecasts and lender presentations</li>
-              <li>Use of funds documentation and lender coordination</li>
-              <li>Support through funding and closing</li>
+              <li>Cash-flow management and budgeting</li>
+              <li>Profitability analysis and cost-control planning</li>
+              <li>Management meetings and business decision support</li>
+              <li>Growth planning and scenario analysis</li>
             </ul>
           </div>
         </div>
@@ -1298,8 +1305,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <div class="svc-trigger">
             <div class="svc-num">08</div>
             <div>
-              <div class="svc-name">Business, Financial, Project &amp; Tax Consulting</div>
-              <div class="svc-cat">Consulting</div>
+              <div class="svc-name">Business Consulting</div>
+              <div class="svc-cat">Advisory Services</div>
             </div>
             <div class="svc-arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
