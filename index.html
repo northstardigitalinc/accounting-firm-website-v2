@@ -672,6 +672,8 @@ footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:36px 0 24px}
 .foot-social{display:flex;gap:12px;margin-top:20px}
 .foot-social-lnk{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(197,155,59,.35);border-radius:50%;color:rgba(255,255,255,.6);transition:border-color .15s,color .15s}
 .foot-social-lnk:hover{border-color:#C59B3B;color:#C59B3B}
+.contact-social-lnk{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--rim);border-radius:50%;color:var(--lo);text-decoration:none;transition:border-color .15s,color .15s,transform .15s}
+.contact-social-lnk:hover{border-color:#C59B3B;color:#C59B3B;transform:translateY(-2px)}
 
 /* ─── UTILS ──────────────────────────────────────────────── */
 .rule{border:none;border-top:1px solid var(--rim)}
@@ -704,7 +706,7 @@ footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:36px 0 24px}
   .logo > div{height:40px}
   .logo > div img{height:56px}
   .logo-sitename{display:none !important}
-  .mob-btn{display:flex;align-items:center;justify-content:center;margin-left:auto;padding:10px;flex-shrink:0}
+  .mob-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-left:auto;padding:10px;flex-shrink:0;gap:0}
   .mob-menu{padding:16px 16px 24px}
   .mob-lnk{font-size:18px;padding:15px 0}
   .mob-menu .btn-primary{display:flex;justify-content:center;width:100%;margin-top:12px;padding:15px 24px;font-size:16px}
@@ -2908,28 +2910,22 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
     <p style="font-size:1.0625rem;color:var(--body);line-height:1.75;margin-bottom:48px;max-width:560px">Whether you're looking for a fractional CFO, need tax strategy, or have a lender or healthcare finance question - reach out and we'll respond within one business day.</p>
 
     <!-- quick action buttons -->
-    <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:56px">
-      <a href="tel:+16473393039" style="display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#fff;font-size:1rem;font-weight:600;padding:16px 28px;border-radius:var(--pill);text-decoration:none">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Call Now
-      </a>
-      <a href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--hi);font-size:1rem;font-weight:600;padding:16px 28px;border-radius:var(--pill);border:1.5px solid var(--rim);text-decoration:none">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Schedule a Discovery Call
-      </a>
+    <div class="hero-btns" style="margin-bottom:56px">
+      <a class="btn-call" href="tel:+16473393039"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.64a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call Now</a>
+      <a class="btn-primary" href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener">Schedule a Discovery Call</a>
     </div>
 
     <!-- social links -->
     <div style="margin-bottom:40px">
       <p style="font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);margin-bottom:16px">Follow Us</p>
       <div style="display:flex;gap:12px">
-        <a href="https://www.instagram.com/bookstocapital" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--rim);border-radius:50%;color:var(--lo);text-decoration:none;transition:border-color .15s,color .15s" onmouseover="this.style.borderColor='#C59B3B';this.style.color='#C59B3B'" onmouseout="this.style.borderColor='';this.style.color=''">
+        <a href="https://www.instagram.com/bookstocapital" target="_blank" rel="noopener" aria-label="Instagram" class="contact-social-lnk">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
         </a>
-        <a href="https://www.facebook.com/bookstocapital" target="_blank" rel="noopener" aria-label="Facebook" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--rim);border-radius:50%;color:var(--lo);text-decoration:none;transition:border-color .15s,color .15s" onmouseover="this.style.borderColor='#C59B3B';this.style.color='#C59B3B'" onmouseout="this.style.borderColor='';this.style.color=''">
+        <a href="https://www.facebook.com/bookstocapital" target="_blank" rel="noopener" aria-label="Facebook" class="contact-social-lnk">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
-        <a href="https://www.tiktok.com/@bookstocapital" target="_blank" rel="noopener" aria-label="TikTok" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--rim);border-radius:50%;color:var(--lo);text-decoration:none;transition:border-color .15s,color .15s" onmouseover="this.style.borderColor='#C59B3B';this.style.color='#C59B3B'" onmouseout="this.style.borderColor='';this.style.color=''">
+        <a href="https://www.tiktok.com/@bookstocapital" target="_blank" rel="noopener" aria-label="TikTok" class="contact-social-lnk">
           <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
         </a>
       </div>
@@ -3019,46 +3015,49 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
   </div>
 </section>
 
-<footer>
-  <div class="w">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-brand">Books To Capital</div>
-        <p class="foot-tag">Financial leadership for businesses that intend to grow.</p>
+  <footer>
+    <div class="w">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-logo">Books To Capital</div>
+          <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
+        </div>
+        <div class="foot-pages-wrap">
+          <div class="foot-hdg">Pages</div>
+          <div class="foot-pages-grid">
+            <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
+            <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
+            <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
+            <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
+            <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
+            <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
+          </div>
+        </div>
+        <div>
+          <div class="foot-hdg">Contact</div>
+          <div class="foot-links">
+            <a class="foot-lnk" href="tel:+16473393039">+1 (647) 339-3039</a>
+            <a class="foot-lnk" href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener">Schedule a Discovery Call</a>
+          </div>
+          <div class="foot-social">
+            <a class="foot-social-lnk" href="https://www.instagram.com/bookstocapital" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a class="foot-social-lnk" href="https://www.facebook.com/bookstocapital" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a class="foot-social-lnk" href="https://www.tiktok.com/@bookstocapital" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.16 8.16 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="foot-head">Pages</div>
-        <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
-        <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
-        <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
-        <a class="foot-lnk" href="#" onclick="go('lend');return false">For Lenders</a>
-        <a class="foot-lnk" href="#" onclick="go('about');return false">About Us</a>
-        <a class="foot-lnk" href="#" onclick="go('contact');return false">Contact Us</a>
-      </div>
-      <div>
-        <div class="foot-head">Services</div>
-        <a class="foot-lnk" href="#" onclick="goSvc('svc-bk');return false">Bookkeeping</a>
-        <a class="foot-lnk" href="#" onclick="goSvc('svc-tax');return false">Tax Preparation</a>
-        <a class="foot-lnk" href="#" onclick="goSvc('svc-pay');return false">Payroll &amp; Contractors</a>
-        <a class="foot-lnk" href="#" onclick="goSvc('svc-gst');return false">GST/HST/PST</a>
-        <a class="foot-lnk" href="#" onclick="goSvc('svc-cfo');return false">Fractional CFO</a>
-        <a class="foot-lnk" href="#" onclick="goSvc('svc-fa');return false">Financial Analysis</a>
-        <a class="foot-lnk" href="#" onclick="goSvc('svc-cap');return false">Capital Access</a>
-        <a class="foot-lnk" href="#" onclick="goSvc('svc-adv');return false">Consulting</a>
-      </div>
-      <div>
-        <div class="foot-head">Contact</div>
-        <a class="foot-lnk" href="tel:+16473393039">+1 (647) 339-3039</a>
-        <a class="foot-lnk" href="https://calendly.com/northstardigitalinc/30min" target="_blank" rel="noopener">Schedule a Discovery Call</a>
-        <a class="foot-lnk" href="#" onclick="go('contact');return false">Send an Inquiry</a>
+      <div class="foot-bot">
+        <span class="foot-copy">&copy; 2025 Books To Capital. All rights reserved. &nbsp;&middot;&nbsp; CPA Licensed</span>
+        <span class="foot-copy">Privacy &nbsp;&middot;&nbsp; Terms &nbsp;&middot;&nbsp; Disclosures</span>
       </div>
     </div>
-    <div class="foot-bot">
-      <span class="foot-copy">&copy; 2025 Books To Capital. All rights reserved. &nbsp;&middot;&nbsp; CPA Licensed</span>
-      <span class="foot-copy">Privacy &nbsp;&middot;&nbsp; Terms &nbsp;&middot;&nbsp; Disclosures</span>
-    </div>
-  </div>
-</footer>
+  </footer>
 </div><!-- /contact -->
 
 <script>
