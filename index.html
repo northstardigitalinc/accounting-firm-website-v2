@@ -617,9 +617,9 @@ svg{display:block}
 }
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
-footer{background:#F2F3F5;border-top:2px solid #C59B3B;padding:64px 0 40px}
+footer{background:#2B2D30;border-top:2px solid #C59B3B;padding:64px 0 40px}
 .foot-grid{
-  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  display:grid;grid-template-columns:2fr 1fr 1fr;
   gap:48px;margin-bottom:56px;
 }
 .foot-logo{
@@ -630,7 +630,7 @@ footer{background:#F2F3F5;border-top:2px solid #C59B3B;padding:64px 0 40px}
 .foot-logo span{color:#C59B3B}
 .foot-desc{
   font-size:1rem;font-weight:300;
-  color:#8A7A60;line-height:1.7;
+  color:rgba(255,255,255,.6);line-height:1.7;
 }
 .foot-hdg{
   font-size:10px;font-weight:700;
@@ -638,19 +638,20 @@ footer{background:#F2F3F5;border-top:2px solid #C59B3B;padding:64px 0 40px}
   color:#C59B3B;margin-bottom:20px;
 }
 .foot-links{display:flex;flex-direction:column;gap:11px}
+.foot-pages-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px 20px}
 .foot-lnk{
   font-size:.9375rem;font-weight:300;
-  color:#8A7A60;transition:color .14s;
+  color:rgba(255,255,255,.6);transition:color .14s;
 }
 .foot-lnk:hover{color:#C59B3B}
 .foot-bot{
-  border-top:1px solid rgba(197,155,59,.25);padding-top:24px;
+  border-top:1px solid rgba(197,155,59,.2);padding-top:24px;
   display:flex;justify-content:space-between;
   align-items:center;flex-wrap:wrap;gap:12px;
 }
-.foot-copy{font-size:13px;font-weight:300;color:#8A7A60}
+.foot-copy{font-size:13px;font-weight:300;color:rgba(255,255,255,.4)}
 .foot-social{display:flex;gap:12px;margin-top:20px}
-.foot-social-lnk{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(197,155,59,.35);border-radius:50%;color:#8A7A60;transition:border-color .15s,color .15s}
+.foot-social-lnk{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(197,155,59,.35);border-radius:50%;color:rgba(255,255,255,.6);transition:border-color .15s,color .15s}
 .foot-social-lnk:hover{border-color:#C59B3B;color:#C59B3B}
 
 /* ─── UTILS ──────────────────────────────────────────────── */
@@ -1097,11 +1098,11 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
 <nav class="nav">
   <div class="w">
     <div class="nav-inner">
-      <a class="logo" href="#" onclick="go('home');return false" aria-label="Books To Capital — Home" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+      <a class="logo" href="#" onclick="go('home');return false" aria-label="Books To Capital — Home" style="display:flex;align-items:center;gap:10px;text-decoration:none;height:70px">
         <div style="height:54px;overflow:hidden;flex-shrink:0">
           <img src="Copy of BTC Logo-Photoroom.png" alt="" style="height:76px;display:block;width:auto">
         </div>
-        <img src="site name.png" alt="Books To Capital" style="height:50px;display:block;width:auto">
+        <img src="site name.png" alt="Books To Capital" style="height:44px;display:block;width:auto;align-self:center">
       </a>
       <div class="nav-links">
         <a class="nl on" id="nl-home" href="#" onclick="go('home');return false">Home</a>
@@ -1369,21 +1370,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
         </div>
         <div>
-          <div class="foot-hdg">Services</div>
-          <div class="foot-links">
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-bk');return false">Bookkeeping</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-tax');return false">Tax Preparation</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-pay');return false">Payroll &amp; Contractors</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-gst');return false">GST/HST/PST</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cfo');return false">Fractional CFO</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-fa');return false">Financial Analysis</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-adv');return false">Consulting</a>
-          </div>
-        </div>
-        <div>
           <div class="foot-hdg">Pages</div>
-          <div class="foot-links">
+          <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
             <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
@@ -1734,21 +1722,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
         </div>
         <div>
-          <div class="foot-hdg">Services</div>
-          <div class="foot-links">
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-bk');return false">Bookkeeping</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-tax');return false">Tax Preparation</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-pay');return false">Payroll &amp; Contractors</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-gst');return false">GST/HST/PST</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cfo');return false">Fractional CFO</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-fa');return false">Financial Analysis</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-adv');return false">Consulting</a>
-          </div>
-        </div>
-        <div>
           <div class="foot-hdg">Pages</div>
-          <div class="foot-links">
+          <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
             <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
@@ -2098,21 +2073,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses.</p>
         </div>
         <div>
-          <div class="foot-hdg">Services</div>
-          <div class="foot-links">
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-bk');return false">Bookkeeping</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-tax');return false">Tax Preparation</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-pay');return false">Payroll &amp; Contractors</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-gst');return false">GST/HST/PST</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cfo');return false">Fractional CFO</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-fa');return false">Financial Analysis</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-adv');return false">Consulting</a>
-          </div>
-        </div>
-        <div>
           <div class="foot-hdg">Pages</div>
-          <div class="foot-links">
+          <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
             <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
@@ -2623,21 +2585,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
         </div>
         <div>
-          <div class="foot-hdg">Services</div>
-          <div class="foot-links">
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-bk');return false">Bookkeeping</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-tax');return false">Tax Preparation</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-pay');return false">Payroll &amp; Contractors</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-gst');return false">GST/HST/PST</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cfo');return false">Fractional CFO</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-fa');return false">Financial Analysis</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-adv');return false">Consulting</a>
-          </div>
-        </div>
-        <div>
           <div class="foot-hdg">Pages</div>
-          <div class="foot-links">
+          <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
             <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
@@ -2825,21 +2774,8 @@ select.cf-inp option{background:var(--depth);color:var(--hi)}
           <p class="foot-desc">Bookkeeping, tax preparation, fractional CFO services, financial analysis, and capital-readiness support for Canadian businesses, with a focus on healthcare practices.</p>
         </div>
         <div>
-          <div class="foot-hdg">Services</div>
-          <div class="foot-links">
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-bk');return false">Bookkeeping</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-tax');return false">Tax Preparation</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-pay');return false">Payroll &amp; Contractors</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-gst');return false">GST/HST/PST</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cfo');return false">Fractional CFO</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-fa');return false">Financial Analysis</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-cap');return false">Capital Access</a>
-            <a class="foot-lnk" href="#" onclick="goSvc('svc-adv');return false">Consulting</a>
-          </div>
-        </div>
-        <div>
           <div class="foot-hdg">Pages</div>
-          <div class="foot-links">
+          <div class="foot-pages-grid">
             <a class="foot-lnk" href="#" onclick="go('home');return false">Home</a>
             <a class="foot-lnk" href="#" onclick="go('svcs');return false">Our Services</a>
             <a class="foot-lnk" href="#" onclick="go('cap');return false">Capital Access</a>
